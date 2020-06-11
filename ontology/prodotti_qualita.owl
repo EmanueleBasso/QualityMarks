@@ -1,0 +1,888 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/progettoWS/prodotti-qualita#"
+     xml:base="http://www.semanticweb.org/progettoWS/prodotti-qualita"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#citta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#citta">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#controlla -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#controlla">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#espressioneComunitaria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#espressioneComunitaria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioIT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioUE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haDisciplinare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haDisciplinare">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haLogo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haLogo">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Logo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haSitoWeb -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haSitoWeb">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SitoWeb"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haZonaDiProduzione -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haZonaDiProduzione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#nazione -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#nazione">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#possiede -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#possiede">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#produce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#produce">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#promuove -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#promuove">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#provincia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#provincia">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#regione -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#regione">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#valorizza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#valorizza">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#caratteristicheMarchio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#caratteristicheMarchio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#colore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#colore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita/Vino"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#denominazioneEstesa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#denominazioneEstesa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haCAP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haCAP">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haEmail">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haFax -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haFax">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haIndirizzo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haIndirizzo">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haNome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haNome">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haNumeroDiTelefono -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haNumeroDiTelefono">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haPartitaIVA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haPartitaIVA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haTitolo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haTitolo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#nelMese -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#nelMese">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#nomeProdotto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#nomeProdotto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#odore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#odore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita/Vino"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#organizzatore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#organizzatore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#sapore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#sapore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita/Vino"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#tipologia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#tipologia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Altro</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>AltroProdottoDiOrigineAnimale</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Birra</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>CarneFresca</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Cioccolato</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>Formaggio</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>Lana</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>OlioEssenziale</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first>OlioGrasso</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first>OrtofrutticoloCereale</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first>Pasta</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first>PesceMolluscoCrostaceo</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first>PiattoPronto</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first>ProdottoABaseDiCarne</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first>ProdottoDiPanetteriaPasticceriaConfetteriaBiscotteria</rdf:first>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                <rdf:first>Sale</rdf:first>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                        <rdf:first>Vino</rdf:first>
+                                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#titoloAlcolometrico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#titoloAlcolometrico">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita/Vino"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Logo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Logo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioIT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioIT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioUE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioUE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoNonAlimentare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoNonAlimentare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SitoWeb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SitoWeb"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita/Vino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita/Vino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://consorziovinidirpinia.it -->
+
+    <owl:NamedIndividual rdf:about="http://consorziovinidirpinia.it">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SitoWeb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.agroqualita.it -->
+
+    <owl:NamedIndividual rdf:about="http://www.agroqualita.it">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SitoWeb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.prolocolapiana.it -->
+
+    <owl:NamedIndividual rdf:about="http://www.prolocolapiana.it">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SitoWeb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AgroqualitaSpA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AgroqualitaSpA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
+        <citta rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/058091-(1884-09-11)"/>
+        <controlla rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiRosso"/>
+        <haSitoWeb rdf:resource="http://www.agroqualita.it"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"/>
+        <provincia rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/058"/>
+        <haCAP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00144</haCAP>
+        <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agroqualita@agroqualita.it</haEmail>
+        <haFax>+39 06 54228692</haFax>
+        <haIndirizzo>Viale Cesare Pavese, 305</haIndirizzo>
+        <haNome>Agroqualità S.p.A.</haNome>
+        <haNumeroDiTelefono>+39 06 54228675</haNumeroDiTelefono>
+        <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05053521000</haPartitaIVA>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AziendaVitivinicolaSalvatoreMolettieri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AziendaVitivinicolaSalvatoreMolettieri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+        <citta rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/064058-(1861-03-17)"/>
+        <haSitoWeb rdf:resource="https://www.salvatoremolettieri.com"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"/>
+        <produce rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiRosso"/>
+        <provincia rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/064"/>
+        <haCAP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">83040</haCAP>
+        <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info@salvatoremolettieri.com</haEmail>
+        <haIndirizzo>Via Musanni, 19/BIS</haIndirizzo>
+        <haNome>Azienda Vitivinicola Salvatore Molettieri</haNome>
+        <haNumeroDiTelefono>+39 0827 637222</haNumeroDiTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
+        <denominazioneEstesa>Marcatura CE</denominazioneEstesa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioTutelaViniDIrpina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioTutelaViniDIrpina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ConsorzioDiTutela"/>
+        <citta rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/064008-(1861-03-17)"/>
+        <haSitoWeb rdf:resource="http://consorziovinidirpinia.it"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"/>
+        <provincia rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/064"/>
+        <valorizza rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiRosso"/>
+        <haCAP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">83100</haCAP>
+        <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info@consorziovinidirpinia.it</haEmail>
+        <haIndirizzo>Viale Cassitto, 7</haIndirizzo>
+        <haNome>Consorzio Tutela vini d’Irpina</haNome>
+        <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+39 3420494288</haNumeroDiTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#DOC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioIT"/>
+        <espressioneComunitaria rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <denominazioneEstesa>Denominazione di Origine Controllata</denominazioneEstesa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#DOCG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOCG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioIT"/>
+        <espressioneComunitaria rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <caratteristicheMarchio>Le DOCG sono riservate ai vini già riconosciuti a Denominazione di Origine Controllata (DOC) da almeno dieci anni che siano ritenuti di particolare pregio, in relazione alle caratteristiche qualitative intrinseche, rispetto alla media di quelle degli analoghi vini così classificati, per effetto dell&apos;incidenza di tradizionali fattori naturali, umani e storici e che abbiano acquisito rinomanza e valorizzazione commerciale a livello nazionale e internazionale.</caratteristicheMarchio>
+        <denominazioneEstesa>Denominazione di Origine Controllata e Garantita</denominazioneEstesa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioUE"/>
+        <denominazioneEstesa>Denominazione di Origine Protetta</denominazioneEstesa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#FianoLoveFest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FianoLoveFest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+        <citta rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/064042-(1861-03-17)"/>
+        <haSitoWeb rdf:resource="http://www.prolocolapiana.it"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"/>
+        <promuove rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiRosso"/>
+        <provincia rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/064"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <haIndirizzo>Via Roma, 12</haIndirizzo>
+        <haTitolo>Fiano Love Fest</haTitolo>
+        <nelMese>Agosto</nelMese>
+        <organizzatore>Pro Loco Lapiana</organizzatore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioUE"/>
+        <denominazioneEstesa>Indicazione Geografica Protetta</denominazioneEstesa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#STG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#STG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioUE"/>
+        <denominazioneEstesa>Specialità Tradizionale Garantita</denominazioneEstesa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiRosso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiRosso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita/Vino"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOCG"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <colore>rubino intenso, tendente al granato fino ad acquistare riflessi arancioni con l’invecchiamento</colore>
+        <nomeProdotto>Taurasi Rosso</nomeProdotto>
+        <odore>caratteristico, etereo, gradevole più o meno intenso</odore>
+        <sapore>asciutto, pieno, armonico, equilibrato, con retrogusto persistente</sapore>
+        <titoloAlcolometrico>12,00% vol</titoloAlcolometrico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.salvatoremolettieri.com -->
+
+    <owl:NamedIndividual rdf:about="https://www.salvatoremolettieri.com">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SitoWeb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/058091-(1884-09-11) -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/058091-(1884-09-11)"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/064008-(1861-03-17) -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/064008-(1861-03-17)"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/064042-(1861-03-17) -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/064042-(1861-03-17)"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/064058-(1861-03-17) -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/064058-(1861-03-17)"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/058 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/058"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/064 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/064"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
