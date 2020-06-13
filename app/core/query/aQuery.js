@@ -7,6 +7,7 @@ module.exports = async function (request, response){
             response.send(res.results.bindings)
         })
         .catch((err) => {
+            logger.error(err)
             response.send(err)
         })
 }

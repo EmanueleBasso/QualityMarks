@@ -1,5 +1,6 @@
 exports.functionHomepage = async function (req, res){
-    res.render('homepage')
+    res.render('index')
+    //res.render('homepage')
 }
 
 exports.a = async function (req, res){
