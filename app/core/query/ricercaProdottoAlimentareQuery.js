@@ -6,13 +6,11 @@ module.exports = async function (request, response){
     var marchio = request.body.marchio
     var categoria = request.body.categoria
     var regione = request.body.regione
-    var nazione = request.body.nazione 
+    var nazione = request.body.nazione
 
     /*  QUERY:
 
             PREFIX prodotti-qualita: <http://www.semanticweb.org/progettoWS/prodotti-qualita#>
-            PREFIX regioni: <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions>
-            PREFIX italia: <https://w3id.org/italia/controlled-vocabulary/territorial-classifications/italy>
             PREFIX l0: <https://w3id.org/italia/onto/l0/>
 
             SELECT ?individual, ?nomeProdotto, ?nomeMarchio, ?nomeRegione, ?nomeNazione
@@ -52,9 +50,9 @@ module.exports = async function (request, response){
                  FROM NAMED <http://localhost:8890/regions>
                  FROM NAMED <http://localhost:8890/italy>
 
-                 WHERE{`;
+                 WHERE{`
 
-    if(categoria !== 'Seleziona...') {
+    if(categoria) {
         query += '?individual a prodotti-qualita:' + categoria + '.'
     } else {
         query += `?individual a ?class.
@@ -63,14 +61,14 @@ module.exports = async function (request, response){
             
     query += '?individual prodotti-qualita:nomeProdotto ?nomeProdotto.'
     
-    if(nome !== '') {
+    if(nome) {
         query += 'FILTER(regex(?nomeProdotto, "' + nome + '", "i"))'
     }
 
     query += `?individual prodotti-qualita:possiede ?marchio.
               ?marchio prodotti-qualita:nomeMarchio ?nomeMarchio.`
 
-    if(marchio !== 'Seleziona...') {
+    if(marchio) {
         query += 'FILTER(?nomeMarchio = "' + marchio + '")'
     }
 
@@ -78,7 +76,7 @@ module.exports = async function (request, response){
               GRAPH ?g1{
                   ?regione l0:name ?nomeRegione.`
     
-    if(regione !== 'Seleziona...') {
+    if(regione) {
         query += 'FILTER(str(?nomeRegione) = "' + regione + '")'
     }
 
@@ -89,7 +87,7 @@ module.exports = async function (request, response){
                   ?nazione l0:name ?nomeNazione.
                   FILTER(LANG(?nomeNazione) = "it")`
 
-    if(nazione !== 'Seleziona...') {
+    if(nazione) {
         query += 'FILTER(str(?nomeNazione) = "' + nazione + '")'
     }
 
@@ -97,11 +95,13 @@ module.exports = async function (request, response){
 
     connection.query(query, true)
         .then((res) => {
+            res.results.bindings.forEach(x => x['tipologia'] = {value: "TODO"})
+            // Dato il nome della classe ottenere il nome visualizzabile dall'annotazione
+
             logger.info(res.results.bindings)
             response.send(res.results.bindings)
         })
         .catch((err) => {
             logger.error(err)
-            response.send(err)
         })
 }
