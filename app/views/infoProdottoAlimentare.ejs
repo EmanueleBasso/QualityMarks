@@ -258,6 +258,62 @@
                                     <span>Email: <%= payload.consorzioTutela.email %></span>
                                 </div>
                             </div>
+                            <div class="masonry-item col-12">
+                                <div class="bgc-white p-20 bd">
+                                    <h5 class="c-grey-900" style="font-size: 1.2em;">Aziende che lo producono:</h5>
+                                    <div class="mT-30" style="margin-top: 0px !important;">
+                                        <div class="layer w-100 fxg-1 scrollable pos-r">
+                                            <div style="font-size: 1.1em;">
+                                                <% 
+                                                    payload.aziedeProduttrici.forEach(element => {
+                                                %>
+                                                <div class="email-list-item peers fxw-nw p-20 bdB bgcH-grey-100">
+                                                    <div class="peer peer-greed ov-h">
+                                                        <h5 class="fsz-def tt-c c-grey-900"><%= element.nome %></h5>
+                                                        <span><%= element.indirizzo %> - <%= element.cap %> <%= element.nomeCitta %> (<%= element.nomeProvincia %>), <%= element.nomeNazione %></span>
+                                                        <br/>
+                                                        <span>Telefono: <%= element.numeroTelefono %></span>
+                                                        <br/>
+                                                        <span>Email: <%= element.email %></span>
+                                                    </div>
+                                                </div>
+                                                <%
+                                                    })                                         
+                                                %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="masonry-item col-12">
+                                <div class="bgc-white p-20 bd">
+                                    <h5 class="c-grey-900" style="font-size: 1.2em;">Eventi relativi:</h5>
+                                    <div class="mT-30" style="margin-top: 0px !important;">
+                                        <div class="layer w-100 fxg-1 scrollable pos-r">
+                                            <div style="font-size: 1.1em;">
+                                                <% 
+                                                    payload.eventi.forEach(element => {
+                                                %>
+                                                <div class="email-list-item peers fxw-nw p-20 bdB bgcH-grey-100">
+                                                    <div class="peer peer-greed ov-h">
+                                                        <h5 class="fsz-def tt-c c-grey-900"><%= element.titolo %></h5>
+                                                        <span>Periodo: <%= element.mese %></span>
+                                                        <br/>
+                                                        <span><%= element.indirizzo %> - <%= element.nomeCitta %> (<%= element.nomeProvincia %>), <%= element.nomeNazione %></span>
+                                                        <br/>
+                                                        <span>Organizzatore: <%= element.organizzatore %></span>
+                                                        <br/>
+                                                        <span>Sito Web: <a href="<%= element.sitoWeb %>" target="_blank" onclick="event.stopPropagation();"><%= element.sitoWeb %></a></span>
+                                                    </div>
+                                                </div>
+                                                <%
+                                                    })                                         
+                                                %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </main>
