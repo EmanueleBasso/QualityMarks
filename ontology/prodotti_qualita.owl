@@ -209,6 +209,68 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#acidita -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#acidita">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#allevamento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#allevamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#aspetto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#aspetto">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#aspettoAlTaglio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#aspettoAlTaglio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#buccia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#buccia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#calibro -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#calibro">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#caratteristicheMarchio -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#caratteristicheMarchio">
@@ -221,7 +283,46 @@
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#colore -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#colore">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Vino"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Vino"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#consistenza -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#consistenza">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#contenutoInAcqua -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#contenutoInAcqua">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#contenutoInHMF -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#contenutoInHMF">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -231,6 +332,49 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#denominazioneEstesa">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#forma -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#forma">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#grassoSuSostanzaSecca -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#grassoSuSostanzaSecca">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#guscio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#guscio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -356,6 +500,33 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#macellazione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#macellazione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#materiaPrima -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#materiaPrima">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#nelMese -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#nelMese">
@@ -386,7 +557,16 @@
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#odore -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#odore">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Vino"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Vino"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -401,10 +581,118 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#pasta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#pasta">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#periodoDiRaccolta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#periodoDiRaccolta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#peso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#peso">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#polpa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#polpa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#produzioneMassimaPerEttaro -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#produzioneMassimaPerEttaro">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#sapore -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#sapore">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Vino"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Vino"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#seme -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#seme">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#stagionatura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#stagionatura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#tenoreMinimoDiBurroDiCacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#tenoreMinimoDiBurroDiCacao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#tenoreMinimoDiSostanzaSeccaDiCacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#tenoreMinimoDiSostanzaSeccaDiCacao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -534,6 +822,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#umidita -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#umidita">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -548,6 +845,30 @@
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Birra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Birra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
     
 
 
@@ -566,6 +887,22 @@
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Evento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Frutta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
     
 
 
@@ -597,9 +934,41 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
+    </owl:Class>
     
 
 
@@ -615,6 +984,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoNonAlimentare">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Prodotto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
     </owl:Class>
     
 
