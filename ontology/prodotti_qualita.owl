@@ -245,8 +245,6 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioEssenziale"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PiattoPronto"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiMare"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPanetteria"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPasticceria"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
                 </owl:unionOf>
             </owl:Class>
@@ -268,7 +266,14 @@
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#aspettoEsterno -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#aspettoEsterno">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPasticceria"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -277,7 +282,14 @@
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#aspettoInterno -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#aspettoInterno">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPasticceria"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -335,6 +347,7 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PiattoPronto"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiMare"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPanetteria"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Sale"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Vino"/>
@@ -355,6 +368,7 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiMare"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPanetteria"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPasticceria"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
                 </owl:unionOf>
             </owl:Class>
@@ -377,6 +391,15 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#contenutoInHMF">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#crosta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#crosta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPanetteria"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -629,6 +652,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#mollica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#mollica">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPanetteria"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#nelMese -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#nelMese">
@@ -670,6 +702,7 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PiattoPronto"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiMare"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPanetteria"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Vino"/>
                 </owl:unionOf>
             </owl:Class>
