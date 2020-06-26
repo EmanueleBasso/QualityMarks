@@ -652,6 +652,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#metodoDiEstrazione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#metodoDiEstrazione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioEssenziale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#mollica -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#mollica">
@@ -740,7 +749,14 @@
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#periodoDiRaccolta -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#periodoDiRaccolta">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#OrtofrutticoloCereale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -775,9 +791,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#produzioneMassimaPerEttaro -->
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#produzionePerEttaro -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#produzioneMassimaPerEttaro">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#produzionePerEttaro">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -1286,6 +1302,111 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiMare"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigureDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/07"/>
+        <aspetto>le acciughe devono risultare intere; la pelle, molto fine, deve risultare in parte ancora visibile</aspetto>
+        <colore>differente a seconda della porzione del corpo varia dal rosa al bruno intenso</colore>
+        <consistenza>i filetti devono risultare morbidi e compatti ed aderenti alla lisca</consistenza>
+        <nomeProdotto>Acciughe sotto sale del Mar Ligure</nomeProdotto>
+        <sapore>asciutto, vivacemente sapido; le carni risultano magre, poco untuose al palato</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigureDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigureDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoDiModena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoDiModena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Aceto"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoDiModenaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/08"/>
+        <acidita>non inferiore al 6%</acidita>
+        <colore>bruno intenso</colore>
+        <densita>a 20 gradi centigradi non inferiore a 1,06</densita>
+        <nomeProdotto>Aceto Balsamico di Modena</nomeProdotto>
+        <odore>caratteristico, persistente, intenso e delicato, gradevolmente acetico, con eventuali note legnose</odore>
+        <sapore>agrodolce, equilibrato, gradevole, caratteristico</sapore>
+        <titoloAlcolometrico>non superiore a 1,5% vol</titoloAlcolometrico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoDiModenaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoDiModenaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiModena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiModena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Aceto"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiModenaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/08"/>
+        <acidita>non inferiore a 4,5 gradi</acidita>
+        <colore>bruno scuro, carico e lucente</colore>
+        <densita>a 20 gradi centigradi non inferiore a 1,240</densita>
+        <nomeProdotto>Aceto balsamico tradizionale di Modena</nomeProdotto>
+        <odore>bouquet caratteristico, fragrante, complesso ma bene amalgamato, penetrante e persistente, di evidente ma gradevole ed armonica acidità</odore>
+        <sapore>caratteristico del balsamico, dolce e agro e ben equilibrato con apprezzabile acidità con lieve tangente di aromaticità ottenuta per influenza dei vari legni usati dei vaselli di acetaia, vivo, franco, pieno, vellutato, intenso e persistente,
+in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiModenaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiModenaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmilia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmilia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Aceto"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmiliaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/08"/>
+        <acidita>non inferiore a 5 gradi</acidita>
+        <colore>bruno scuro, limpido, lucente</colore>
+        <densita>a 20 gradi centigradi non inferiore a 1,200 gr/ml</densita>
+        <nomeProdotto>Aceto balsamico tradizionale di Reggio Emilia</nomeProdotto>
+        <odore>penetrante e persistente, fragrante con gradevole acidità e bouquet caratteristico anche in relazione ai legni utilizzati e ai lunghi invecchiamenti</odore>
+        <sapore>dolce ed agro ben amalgamato di apprezzabile acidità ed aromaticità in armonia con i caratteri olfattivi</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmiliaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmiliaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AgroqualitaSpA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AgroqualitaSpA">
@@ -1302,6 +1423,31 @@
         <haNome>Agroqualità S.p.A.</haNome>
         <haNumeroDiTelefono>+39 06 54228675</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05053521000</haPartitaIVA>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AmatricianaTradizionale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AmatricianaTradizionale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#PiattoPronto"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#AmatricianaTradizionaleDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#STG"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/12"/>
+        <aspetto>cremoso e omogeneo con passata di pomodoro granulosa e/o con polpa densa con pezzi di pomodoro distinguibili</aspetto>
+        <colore>rosso più o meno intenso</colore>
+        <nomeProdotto>Amatriciana Tradizionale</nomeProdotto>
+        <odore>caratteristico del pomodoro maturo, tipico del prodotto fresco</odore>
+        <sapore>tipico di pomodoro maturo accompagnato da note sapide legate alla presenza del tradizionale guanciale stagionato e di peperoncino e/o pepe essiccato o fresco</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AmatricianaTradizionaleDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AmatricianaTradizionaleDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
     </owl:NamedIndividual>
     
 
@@ -1324,12 +1470,174 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#BergamottoDiReggioCalabria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BergamottoDiReggioCalabria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioEssenziale"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#BergamottoDiReggioCalabriaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/18"/>
+        <aspetto>liquido, mobile, limpido talvolta con deposito solido</aspetto>
+        <colore>da verde a giallo verdastro</colore>
+        <densita>relativa a 20 gradi centigradi compresa tra 0,876 e 0,884</densita>
+        <materiaPrima>frutto Citrus Bergamia Risso nelle varietà Femminello, Castagnaro e Fantastico</materiaPrima>
+        <metodoDiEstrazione>cold pressed</metodoDiEstrazione>
+        <nomeProdotto>Bergamotto di Reggio Calabria - olio essenziale</nomeProdotto>
+        <odore>caratteristico, gradevole, fresco, richiamante quello del pericarpo del Bergamotto</odore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#BergamottoDiReggioCalabriaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BergamottoDiReggioCalabriaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#BurrataDiAndria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BurrataDiAndria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#BurrataDiAndriaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/16"/>
+        <aspetto>colore bianco latte, con involucro di spessore non inferiore a 2 mm</aspetto>
+        <forma>forma rotondeggiante a forma di sacca, dalla caratteristica chiusura apicale</forma>
+        <materiaPrima>latte vaccino, panna e formaggio a pasta filata</materiaPrima>
+        <nomeProdotto>Burrata di Andria</nomeProdotto>
+        <pasta>filata stracciata sfılaccıata e immersa in panna</pasta>
+        <peso>varia tra i 100 g e i 1000 g</peso>
+        <sapore>piacevoli sentori di lattico fresco o cotto, burro, panna</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#BurrataDiAndriaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BurrataDiAndriaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CE">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
         <denominazioneEstesa>Marcatura CE</denominazioneEstesa>
         <nomeMarchio>CE</nomeMarchio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OrtofrutticoloCereale"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestumDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <calibro>pezzatura media, capolini con diametro della sezione massima trasversale compreso tra 8.5 e 10.5 cm. di diametro della sezione massima longitudinale compreso tra 7.5 e 12.5 cm., e con rapporto tra i due compreso tra 0.9 e 1.2</calibro>
+        <colore>verde, con sfumatura violetto-rosacea</colore>
+        <forma>capolini di forma sub-sferica, compatta, con caratteristico foro all&apos;apice</forma>
+        <nomeProdotto>Carciofo di Paestum</nomeProdotto>
+        <periodoDiRaccolta>compreso dal 1 febbraio al 20 maggio</periodoDiRaccolta>
+        <sapore>gradevole</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestumDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestumDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Cilento -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cilento">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CilentoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <acidita>non eccedente grammi 0,70 per 100 grammi di olio</acidita>
+        <colore>dal verde al giallo paglierino più o meno intenso</colore>
+        <nomeProdotto>Cilento</nomeProdotto>
+        <odore>di fruttato medio leggero</odore>
+        <periodoDiRaccolta>entro il 31 dicembre di ogni anno</periodoDiRaccolta>
+        <produzionePerEttaro>non può superare 11000 kg per ettaro</produzionePerEttaro>
+        <sapore>fruttato con media o debole sensazione di amore e di piccante</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CilentoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CilentoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModicaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/19"/>
+        <forma>a parallelepipedo rettangolare con i lati rastremati a tronco di piramide</forma>
+        <nomeProdotto>Cioccolato di Modica</nomeProdotto>
+        <pasta>di colore marrone con evidente granulosità per la presenza di cristalli di zucchero all’interno del prodotto; visibile eventuale affioramento del burro di cacao sulla superficie esterna</pasta>
+        <peso>non superiore a 100 grammi</peso>
+        <sapore>dolce con nota di amaro; percezione di granulosità o sabbiosità; buona fusibilità in bocca e struttura croccante</sapore>
+        <tenoreMinimoDiBurroDiCacao>non inferiore al 25 %</tenoreMinimoDiBurroDiCacao>
+        <tenoreMinimoDiSostanzaSeccaDiCacao>non inferiore al 50 %</tenoreMinimoDiSostanzaSeccaDiCacao>
+        <umidita>non superiore al 2,5%</umidita>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModicaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModicaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CollineSalernitane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CollineSalernitane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CollineSalernitaneDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <acidita>non eccedente grammi 0,70 per 100 grammi di olio</acidita>
+        <colore>dal verde al giallo paglierino più o meno intenso</colore>
+        <nomeProdotto>Colline Salernitane</nomeProdotto>
+        <odore>di fruttato medio alto</odore>
+        <periodoDiRaccolta>entro il 31 dicembre di ogni anno</periodoDiRaccolta>
+        <produzionePerEttaro>non può superare 12000 kg per ettaro</produzionePerEttaro>
+        <sapore>fruttato con media o debole sensazione di amaro e leggero sentore di piccante</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CollineSalernitaneDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CollineSalernitaneDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
     </owl:NamedIndividual>
     
 
@@ -1348,6 +1656,31 @@
         <haIndirizzo>Viale Cassitto, 7</haIndirizzo>
         <haNome>Consorzio Tutela vini d’Irpina</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+39 3420494288</haNumeroDiTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CozzaDiScardovari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CozzaDiScardovari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiMare"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CozzaDiScardovariDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/05"/>
+        <aspetto>mollusco bivalve dalla forma allungata; le valve sono bombate, uguali di forma quasi triangolare e presentano sottili striature concentriche; dal guscio escono filamenti bruni assai robusti, costituenti la ghiandola del bisso</aspetto>
+        <colore>conchiglia colore nero-violaceo; all’interno il colore è viola-madreperlaceo e questo può variare in relazione al ciclo produttivo ed al sesso</colore>
+        <consistenza>carni particolarmente morbide e fondenti con elevata palabilità</consistenza>
+        <nomeProdotto>Cozza di Scardovari</nomeProdotto>
+        <sapore>dolcezza peculiare delle carni grazie al basso contenuto in sodio</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CozzaDiScardovariDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CozzaDiScardovariDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
     </owl:NamedIndividual>
     
 
@@ -1403,6 +1736,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoConBuccia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoConBuccia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OrtofrutticoloCereale"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <calibro>numero di fichi essicati con buccia non superiore a 70 per kg</calibro>
+        <colore>uniforme da giallo chiaro a giallo; se ha subito un processo di cottura deve avere colore uniforme da giallo ambrato a marrone</colore>
+        <nomeProdotto>Fico Bianco Del Cilento con buccia</nomeProdotto>
+        <periodoDiRaccolta>quando i fichi sono stramaturi</periodoDiRaccolta>
+        <polpa>consistenza pastosa con acheni prevalentemente vuoti, ricettacolo quasi interamente riempito di colore giallo ambrato</polpa>
+        <umidita>massima 26%</umidita>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoSenzaBuccia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoSenzaBuccia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OrtofrutticoloCereale"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <calibro>numero di fichi mondi non superiore a 85 per kg</calibro>
+        <colore>chiarissimo tendente al bianco</colore>
+        <nomeProdotto>Fico Bianco Del Cilento senza buccia (o fichi mondi)</nomeProdotto>
+        <periodoDiRaccolta>possono essere raccolti a non completa maturazione</periodoDiRaccolta>
+        <polpa>consistenza pastosa con acheni prevalentemente vuoti, ricettacolo quasi interamente riempito di colore giallo ambrato</polpa>
+        <umidita>massima 26%</umidita>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP">
@@ -1413,12 +1790,463 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#IrpiniaCollineUfita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#IrpiniaCollineUfita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IrpiniaCollineUfitaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <acidita>inferiore o uguale a 0,5%</acidita>
+        <colore>da giallo paglierino a verde più o meno intenso</colore>
+        <nomeProdotto>Irpinia Colline dell’Ufita</nomeProdotto>
+        <periodoDiRaccolta>entro il 31 dicembre di ogni anno</periodoDiRaccolta>
+        <produzionePerEttaro>non può superare i 60 kg a pianta</produzionePerEttaro>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#IrpiniaCollineUfitaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#IrpiniaCollineUfitaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#LimoneCostaAmalfi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#LimoneCostaAmalfi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OrtofrutticoloCereale"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#LimoneCostaAmalfiDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <buccia>di spessore medio</buccia>
+        <colore>giallo citrino</colore>
+        <forma>ellittico - allungata; lobo pedicellare lievemente prominente, con area basale media</forma>
+        <nomeProdotto>Limone Costa d&apos;Amalfi</nomeProdotto>
+        <periodoDiRaccolta>dal 1 febbraio al 31 ottobre</periodoDiRaccolta>
+        <peso>medio - grosse, peso non inferiore a 100 grammi</peso>
+        <polpa>di colore giallo paglierino, con succo abbondante (resa uguale o superiore al 25%) e con elevata acidità (non inferiore a 3,5/100 ml)</polpa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#LimoneCostaAmalfiDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#LimoneCostaAmalfiDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDellaLunigiana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDellaLunigiana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDellaLunigianaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/09"/>
+        <aspetto>si mantiene a lungo liquido e limpido; può tuttavia presentare, nella parte finale del periodo di commercializzazione, una parziale formazione di cristalli, senza comunque arrivare ad una cristallizzazione completa</aspetto>
+        <colore>molto chiaro, da pressoché incolore a giallo paglierino</colore>
+        <contenutoInAcqua>non superiore a 18 %</contenutoInAcqua>
+        <contenutoInHMF>non superiore a 10 mg/kg</contenutoInHMF>
+        <nomeProdotto>Miele della Lunigiana</nomeProdotto>
+        <odore>leggero, poco persistente, fruttato, confettato, simile a quello dei fiori</odore>
+        <sapore>decisamente dolce, con leggerissima acidità e privo di amarezza; l&apos;aroma è molto delicato, tipicamente vanigliato, poco persistente e privo di retrogusto</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDellaLunigianaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDellaLunigianaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDelleDolomitiBellunesi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDelleDolomitiBellunesi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDelleDolomitiBellunesiDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/05"/>
+        <aspetto>con spiccata tendenza alla cristallizzazione (fine ed omogenea)</aspetto>
+        <colore>dal giallo chiaro all’ambrato</colore>
+        <contenutoInAcqua>compreso tra il 15% ed il 18%</contenutoInAcqua>
+        <contenutoInHMF>minore di 10 mg/KG</contenutoInHMF>
+        <nomeProdotto>Miele delle Dolomiti Bellunesi</nomeProdotto>
+        <odore>con spiccata tendenza alla cristallizzazione (fine ed omogenea)</odore>
+        <sapore>dolciastro, morbido, più o meno intenso</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDelleDolomitiBellunesiDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDelleDolomitiBellunesiDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Miele"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresinoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03"/>
+        <aspetto>tipicamente liquido, cristallizzazione rara e comunque molto ritardata</aspetto>
+        <colore>trasparente, da quasi incolore a giallo paglierino</colore>
+        <contenutoInAcqua>non superiore al 17.50%</contenutoInAcqua>
+        <contenutoInHMF>inferiore a 15 mg/kg</contenutoInHMF>
+        <nomeProdotto>Miele Varesino</nomeProdotto>
+        <odore>generico di miele, leggero e delicato, privo di odori marcati</odore>
+        <sapore>molto dolce, delicato, confettato e vanigliato</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresinoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresinoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MozzarellaDiBufalaCampana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MozzarellaDiBufalaCampana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MozzarellaDiBufalaCampanaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <aspetto>colore bianco porcellanato, crosta sottilissima di circa un millimetro con superficie liscia, mai viscida né scaglionata</aspetto>
+        <forma>oltre alla forma tondeggiante, sono ammesse altre forme tipiche della zona di produzione, quali bocconcini, treccie, perline, ciliegine, nodini, ovoline</forma>
+        <materiaPrima>latte di bufala intero fresco</materiaPrima>
+        <nomeProdotto>Mozzarella di Bufala Campana</nomeProdotto>
+        <pasta>struttura a foglie sottili, leggermente elastica nelle prime otto-dieci ore dopo la produzione e il confezionamento, successivamente tendente a divenire più fondente</pasta>
+        <peso>variabile da 10 a 800 grammi in relazione alla forma</peso>
+        <sapore>caratteristico e delicato</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MozzarellaDiBufalaCampanaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MozzarellaDiBufalaCampanaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OrtofrutticoloCereale"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoniDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <calibro>nucula di dimensioni medie, con calibri non inferiori a 18 mm</calibro>
+        <forma>nucula subsferica</forma>
+        <guscio>di medio spessore (1,11 - 1,25 mm) presenta colore nocciola più o meno intenso con striature color marrone più scuro</guscio>
+        <nomeProdotto>Nocciola di Giffoni</nomeProdotto>
+        <polpa>di colore bianco, consistente e aromatica</polpa>
+        <seme>di forma subsferica, con rara presenza di fibre, calibro non inferiore a 13 mm</seme>
+        <umidita>non superiore al 6% (umidità relativa del seme dopo l&apos;essiccazione)</umidita>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoniDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoniDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioDiPuglia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioDiPuglia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioDiPugliaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/16"/>
+        <acidita>non superiore allo 0,40%</acidita>
+        <colore>dal verde al giallo paglierino con variazione cromatica nel tempo</colore>
+        <nomeProdotto>Olio di Puglia</nomeProdotto>
+        <odore>si caratterizza per un netto fruttato di oliva di intensità variabile con evidenti note
+vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odore>
+        <periodoDiRaccolta>nel periodo compreso tra l’ inizio dell’invaiatura (Indice di Pigmentazione pari a 2) e il 31 gennaio della campagna di produzione (Indice di Pigmentazione pari a 5)</periodoDiRaccolta>
+        <produzionePerEttaro>non superiore a 12000 kg per ettaro</produzionePerEttaro>
+        <sapore>si esprime con sentori vegetali, note di amaro e piccante di intensità variabile a cui possono associarsi note di mandorla verde e/o cardo, con un retrogusto di erba, carciofo, altri ortaggi e leggeri sentori di mandorla fresca</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioDiPugliaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioDiPugliaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ParmigianoReggiano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ParmigianoReggiano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ParmigianoReggianoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/08"/>
+        <aspetto>crosta di colore paglierino naturale</aspetto>
+        <forma>cilindrica a scalzo leggermente convesso o quasi diritto, con facce piane leggermente orlate</forma>
+        <materiaPrima>latte crudo, parzialmente scremato, proveniente da vacche la cui alimentazione è costituita prevalentemente da foraggi della zona d’origine</materiaPrima>
+        <nomeProdotto>Parmigiano Reggiano</nomeProdotto>
+        <pasta>minutamente granulosa, frattura a scaglia, con colore che varia da leggermente paglierino a paglierino</pasta>
+        <peso>peso minimo di una forma 30 kg</peso>
+        <sapore>fragrante, delicato, saporito ma non piccante</sapore>
+        <stagionatura>almeno 12 mesi</stagionatura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ParmigianoReggianoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ParmigianoReggianoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Olio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentinaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <acidita>non eccedente grammi 0,80 per 100 grammi di olio</acidita>
+        <colore>dal verde al giallo paglierino più o meno intenso</colore>
+        <nomeProdotto>Penisola Sorrentina</nomeProdotto>
+        <odore>di fruttato</odore>
+        <periodoDiRaccolta>entro il 31 dicembre di ogni anno</periodoDiRaccolta>
+        <produzionePerEttaro>non può superare 9000 kg per ettaro</produzionePerEttaro>
+        <sapore>fruttato con media o debole sensazione di amaro e leggero sentore di piccante</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentinaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentinaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioConservatoAlPiennolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioConservatoAlPiennolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OrtofrutticoloCereale"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <buccia>spessa</buccia>
+        <calibro>peso non superiore a 30 g, rapporto fra i diametri maggiore e minore compreso fra 1,2 e 1,3</calibro>
+        <colore>rosso scuro</colore>
+        <forma>forma ovale o leggermente pruniforme con apice appuntito e frequente costolatura della parte peduncolare</forma>
+        <nomeProdotto>Pomodorino del Piennolo del Vesuvio Conservato al Piennolo</nomeProdotto>
+        <periodoDiRaccolta>compreso tra il 20 giugno ed il 31 agosto</periodoDiRaccolta>
+        <polpa>rossa di buona consistenza</polpa>
+        <sapore>vivace ed intenso</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioFresco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioFresco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#OrtofrutticoloCereale"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <buccia>spessa</buccia>
+        <calibro>peso non superiore a 30 g, rapporto fra i diametri maggiore e minore compreso fra 1,2 e 1,3</calibro>
+        <colore>vermiglio</colore>
+        <forma>forma ovale o leggermente pruniforme con apice appuntito e frequente costolatura della parte peduncolare</forma>
+        <nomeProdotto>Pomodorino del Piennolo del Vesuvio Fresco</nomeProdotto>
+        <periodoDiRaccolta>compreso tra il 20 giugno ed il 31 agosto</periodoDiRaccolta>
+        <polpa>di colore rosso ad elevata consistenza</polpa>
+        <sapore>vivace, intenso e dolce-acidulo</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ProvoloneDelMonaco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProvoloneDelMonaco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProvoloneDelMonacoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <aspetto>crosta sottile di colore giallognolo con toni leggermente scuri, quasi liscia con leggere insenature longitudinali in corrispondenza dei legacci di rafia usati per il sostegno a coppia</aspetto>
+        <forma>forma di melone leggermente allungato ovvero di pera senza testina</forma>
+        <materiaPrima>latte proveniente, per almeno il 20%, da bovini tipo genetico autoctono (TGA) Agerolese iscritti al registro anagrafico, e nella quota restante (80%) da
+bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e Meticci locali)</materiaPrima>
+        <nomeProdotto>Provolone del Monaco</nomeProdotto>
+        <pasta>pasta di colore crema con toni giallognoli, elastica, compatta, uniforme e senza sfaldature, morbida e con tipiche occhiature (a «occhio di pernice») di diametro variabile fino a 5 mm, con eventuale presenza di sporadiche occhiature di diametro maggiore, fino a 12 mm, più abbondanti verso il centro della massa</pasta>
+        <peso>peso minimo di 2,5 kg e peso massimo di 8 kg</peso>
+        <sapore>dolce e butirroso ed un leggero e piacevole gusto piccante</sapore>
+        <stagionatura>stagionatura di almeno centottanta giorni (sei mesi)</stagionatura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ProvoloneDelMonacoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProvoloneDelMonacoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampanaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <aspetto>assenza di crosta</aspetto>
+        <colore>bianco porcellana</colore>
+        <consistenza>morbida, granulosa, ma non sabbiosa</consistenza>
+        <forma>tronco piramidale o tronco conica</forma>
+        <grassoSuSostanzaSecca>minimo 45%</grassoSuSostanzaSecca>
+        <materiaPrima>primo siero (o siero dolce) proveniente dalla lavorazione del latte di bufala, ottenuto dalla mungitura manuale e/o meccanica di bufale di Razza Mediterranea Italiana</materiaPrima>
+        <nomeProdotto>Ricotta di Bufala Campana</nomeProdotto>
+        <peso>fino a 2000 grammi</peso>
+        <sapore>caratteristico, fresco e delicatamente dolce</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampanaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampanaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#STG -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#STG">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioUE"/>
         <denominazioneEstesa>Specialità Tradizionale Garantita</denominazioneEstesa>
         <nomeMarchio>STG</nomeMarchio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SaleMarinoDiTrapani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SaleMarinoDiTrapani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Sale"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SaleMarinoDiTrapaniDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/19"/>
+        <cloruroDiSodioSuSostanzaSecca>maggiore del 97,0%</cloruroDiSodioSuSostanzaSecca>
+        <colore>bianco</colore>
+        <granulometria>mista</granulometria>
+        <nomeProdotto>Sale Marino di Trapani</nomeProdotto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SaleMarinoDiTrapaniDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SaleMarinoDiTrapaniDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiMare"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentinoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/04"/>
+        <colore>grigio-verde o bruna, con dorso e fianchi cosparsi di macchiette biancastre, gialle o rosee, prive di alone; pinna dorsale e caudale grigia, le altre arancio con margine anteriore bianco; la carne è bianca o salmonata</colore>
+        <consistenza>soda, tenera, magra e asciutta</consistenza>
+        <nomeProdotto>Salmerino del Trentino</nomeProdotto>
+        <sapore>delicato sapore di pesce e con un odore tenue e fragrante d’acqua dolce, privo di qualsiasi retrogusto di fango</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentinoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentinoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SquacqueroneDiRomagna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SquacqueroneDiRomagna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SquacqueroneDiRomagnaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/08"/>
+        <aspetto>deve presentarsi senza crosta né buccia</aspetto>
+        <forma>dipende dal contenitore in cui viene posto, in quanto la sua consistenza molto cremosa, non gli consente di presentarsi compatto</forma>
+        <materiaPrima>latte vaccino intero</materiaPrima>
+        <nomeProdotto>Squacquerone di Romagna</nomeProdotto>
+        <pasta>morbida, cremosa, adesiva, deliquescente, di elevata spalmabilità, di colore bianco, madreperlaceo</pasta>
+        <peso>varia da 1 hg a 2 kg</peso>
+        <sapore>gradevole, dolce, con una punta acidula, il salato é presente ma non in modo evidente</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SquacqueroneDiRomagnaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SquacqueroneDiRomagnaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
     </owl:NamedIndividual>
     
 
@@ -1444,6 +2272,56 @@
         <odore>caratteristico, etereo, gradevole più o meno intenso</odore>
         <sapore>asciutto, pieno, armonico, equilibrato, con retrogusto persistente</sapore>
         <titoloAlcolometrico>12,00% vol</titoloAlcolometrico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiMare"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirinoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/01"/>
+        <aspetto>dorso curvo e gibboso</aspetto>
+        <colore>colorazione viva, brillante e lucente grigio-grafite o verde opalino sul dorso e giallo dorato sui fianchi</colore>
+        <consistenza>corpo rigido e sodo, leggermente elastico, resistente al tatto, non flaccido e molle</consistenza>
+        <nomeProdotto>Tinca Gobba Dorata del Pianalto di Poirino</nomeProdotto>
+        <odore>tenue, fragrante di acqua dolce, non acre o sgradevole e forte di pesce, assolutamente non di fango o erba o di sostanze organiche</odore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirinoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirinoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiMare"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentinoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/04"/>
+        <aspetto>dorso verdastro con una fascia rosea su entrambi i fianchi; ventre biancastro; macchiette scure sparse sul corpo e sulla pinna dorsale e caudale</aspetto>
+        <consistenza>carne compatta, tenera, magra</consistenza>
+        <nomeProdotto>Trote del Trentino</nomeProdotto>
+        <odore>odore tenue e fragrante d’acqua dolce, privo di qualsiasi retrogusto di fango</odore>
+        <sapore>delicato sapore di pesce</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentinoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentinoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
     </owl:NamedIndividual>
     
 
@@ -1498,9 +2376,102 @@
     
 
 
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/RicottaRomana -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/RicottaRomana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Ricotta"/>
+        <haDisciplinare rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/RicottaRomanaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/12"/>
+        <colore>bianco</colore>
+        <consistenza>struttura grumosa</consistenza>
+        <grassoSuSostanzaSecca>minimo 40%</grassoSuSostanzaSecca>
+        <materiaPrima>siero di latte intero di pecora</materiaPrima>
+        <nomeProdotto>Ricotta Romana</nomeProdotto>
+        <peso>fino a 2 Kg</peso>
+        <sapore>dolciastro di latte</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/RicottaRomanaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/RicottaRomanaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/01 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/01"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/04 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/04"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/05 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/05"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/07 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/07"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/08 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/08"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/09 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/09"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/12 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/12"/>
+    
+
+
     <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/16 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/16"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/18 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/18"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/19 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/19"/>
 </rdf:RDF>
 
 
