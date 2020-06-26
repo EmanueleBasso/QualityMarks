@@ -70,7 +70,7 @@
                     <div class="sidebar-logo">
                         <div class="peers ai-c fxw-nw">
                             <div class="peer peer-greed">
-                                <a class="sidebar-link td-n" href="#">
+                                <a class="sidebar-link td-n" href="/QualityMarks/ricercaProdottoAlimentare">
                                     <div class="peers ai-c fxw-nw">
                                         <div class="peer" style="margin: 30px auto 30px auto;">
                                             <div class="logo"><img src="../images/logo.png" width="100%"></div>
@@ -87,7 +87,7 @@
                     </div>
                     <ul class="sidebar-menu scrollable pos-r">
                         <li class="nav-item">
-                            <a class="sidebar-link" href="#">
+                            <a class="sidebar-link" href="/QualityMarks/ricercaProdottoAlimentare">
                                 <span class="icon-holder"><i class="c-blue-500 ti-search"></i> </span><span class="title">Ricerca Prodotto Alimentare</span>
                             </a>
                         </li>
@@ -97,7 +97,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="sidebar-link" href="/QualityMarks/ricercaEventi">
+                            <a class="sidebar-link" href="#">
                                 <span class="icon-holder"><i class="c-orange-500 ti-map-alt"></i> </span><span class="title">Ricerca Eventi</span>
                             </a>
                         </li>
@@ -111,36 +111,23 @@
                             <div class="col-md-6"></div>
                             <div class="col-12">
                                 <div class="bgc-white p-20 bd">
-                                    <h4 class="c-grey-900">Ricerca Prodotto Alimentare</h4>
+                                    <h4 class="c-grey-900">Ricerca Eventi</h4>
                                     <div class="mT-30">
                                         <form id="form">
                                             <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <label for="inputQuery">Nome Prodotto</label> <input class="form-control" id="inputQuery" aria-describedby="" placeholder="Cerca..." />
+                                                <div class="form-group col-md-5">
+                                                    <label for="inputCitta">Città</label> <input class="form-control" id="inputCitta" aria-describedby="" placeholder="Nome città..." />
                                                 </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="inputMarchio">Tipo Marchio Posseduto</label>
-                                                    <select id="inputMarchio" class="form-control">
+                                                <div class="form-group col-md-2">
+                                                    <label for="inputNazione">Nazione</label>
+                                                    <select id="inputNazione" class="form-control">
                                                         <option selected="selected" value="">Seleziona...</option>
-                                                        <option value="DOC">DOC</option>
-                                                        <option value="DOCG">DOCG</option>
-                                                        <option value="DOP">DOP</option>
-                                                        <option value="IGP">IGP</option>
-                                                        <option value="STG">STG</option>
+                                                        <option value="Italia">Italia</option>
                                                     </select>
                                                 </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="inputCategoria">Categoria di appartenza</label>
-                                                    <select id="inputCategoria" class="form-control">
-                                                        <option selected="selected" value="">Seleziona...</option>
-                                                        <option value="Vino">Vino</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
                                                 <div class="form-group col-md-2">
                                                     <label for="inputRegione">Regione</label>
-                                                    <select id="inputRegione" class="form-control">
+                                                    <select id="inputRegione" class="form-control" onchange="changeProvincie(this);">
                                                         <option selected="selected" value="">Seleziona...</option>
                                                         <option value="Abruzzo">Abruzzo</option>
                                                         <option value="Basilicata">Basilicata</option>
@@ -164,11 +151,36 @@
                                                         <option value="Veneto">Veneto</option>
                                                     </select>
                                                 </div>
-                                                <div class="form-group col-md-2">
-                                                    <label for="inputNazione">Nazione</label>
-                                                    <select id="inputNazione" class="form-control">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputProvincia">Provincia</label>
+                                                    <select id="inputProvincia" class="form-control">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputMese">Nel mese</label>
+                                                    <select id="inputMese" class="form-control">
                                                         <option selected="selected" value="">Seleziona...</option>
-                                                        <option value="Italia">Italia</option>
+                                                        <option value="Gennaio">Gennaio</option>
+                                                        <option value="Febbraio">Febbraio</option>
+                                                        <option value="Marzo">Marzo</option>
+                                                        <option value="Aprile">Aprile</option>
+                                                        <option value="Maggio">Maggio</option>
+                                                        <option value="Giugno">Giugno</option>
+                                                        <option value="Luglio">Luglio</option>
+                                                        <option value="Agosto">Agosto</option>
+                                                        <option value="Settembre">Settembre</option>
+                                                        <option value="Ottobre">Ottobre</option>
+                                                        <option value="Novembre">Novembre</option>
+                                                        <option value="Dicembre">Dicembre</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="inputCategoria">Tipologia prodotto</label>
+                                                    <select id="inputCategoria" class="form-control">
+                                                        <option selected="selected" value="">Seleziona...</option>
+                                                        <option value="Vino">Vino</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -191,6 +203,6 @@
         <script type="text/javascript" src="../scripts/template/vendor.js"></script>
         <script type="text/javascript" src="../scripts/template/bundle.js"></script>
         <script type="text/javascript" src="../scripts/template/jquery.js"></script>
-        <script type="text/javascript" src="../scripts/ricercaProdottoAlimentare.js"></script>
+        <script type="text/javascript" src="../scripts/ricercaEventi.js"></script>
     </body>
 </html>

@@ -129,6 +129,7 @@ module.exports = async function (request, response){
                                 "sitoWeb": res[0]['sitoWeb'].value,
                                 "nomeCitta": res[0]['nomeCitta'].value,
                                 "nomeProvincia": res[0]['nomeProvincia'].value,
+                                "nomeRegione": res[0]['nomeRegione'].value,
                                 "nomeNazione": res[0]['nomeNazione'].value
                             }
                             
@@ -395,10 +396,11 @@ function getInfoEvento(evento){
             PREFIX prodotti-qualita: <http://www.semanticweb.org/progettoWS/prodotti-qualita#>
             PREFIX l0: <https://w3id.org/italia/onto/l0/>
 
-            SELECT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeNazione
+            SELECT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione
 
             FROM NAMED <http://localhost:8890/cities>
             FROM NAMED <http://localhost:8890/provinces>
+            FROM NAMED <http://localhost:8890/regions>
             FROM NAMED <http://localhost:8890/italy>
 
             WHERE{
@@ -418,18 +420,24 @@ function getInfoEvento(evento){
                     ?provincia l0:name ?nomeProvincia.
                 }
 
-                <evento> prodotti-qualita:nazione ?nazione.
+                <evento> prodotti-qualita:regione ?regione.
                 GRAPH ?g3{
+                    ?regione l0:name ?nomeRegione.
+                }
+
+                <evento> prodotti-qualita:nazione ?nazione.
+                GRAPH ?g4{
                     ?nazione l0:name ?nomeNazione.
                     FILTER(LANG(?nomeNazione) = "it")
                 }
             }
     */
 
-    var query = `SELECT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeNazione
+    var query = `SELECT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione
 
                 FROM NAMED <http://localhost:8890/cities>
                 FROM NAMED <http://localhost:8890/provinces>
+                FROM NAMED <http://localhost:8890/regions>
                 FROM NAMED <http://localhost:8890/italy>
 
                 WHERE{`
@@ -450,8 +458,13 @@ function getInfoEvento(evento){
                 ?provincia l0:name ?nomeProvincia.
             }`
 
-    query += '<' + evento + `> prodotti-qualita:nazione ?nazione.
+    query += '<' + evento + `> prodotti-qualita:regione ?regione.
             GRAPH ?g3{
+                ?regione l0:name ?nomeRegione.
+            }`
+
+    query += '<' + evento + `> prodotti-qualita:nazione ?nazione.
+            GRAPH ?g4{
                 ?nazione l0:name ?nomeNazione.
                 FILTER(LANG(?nomeNazione) = "it")
             }}`

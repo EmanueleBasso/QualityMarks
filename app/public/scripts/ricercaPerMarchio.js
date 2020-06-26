@@ -14,7 +14,6 @@ function query(){
 
     var request = {}
 
-    request['query'] = $('#inputQuery').val()
     request['marchio'] = $('#inputMarchio').val()
     request['categoria'] = $('#inputCategoria').val()
     request['regione'] = $('#inputRegione').val()
@@ -22,7 +21,7 @@ function query(){
 
     $.ajax({
         method: 'POST',
-        url: '/QualityMarks/ricercaProdottoAlimentareQuery',
+        url: '/QualityMarks/ricercaPerMarchioQuery',
         data: request,
         dataType: 'json'
     }).done(function(data){
