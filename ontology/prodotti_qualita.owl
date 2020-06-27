@@ -640,6 +640,7 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Formaggio"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioEssenziale"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoABaseDiCarne"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPanetteria"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoDiPasticceria"/>
@@ -858,6 +859,15 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#tenoreMinimoDiSostanzaSeccaDiCacao">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Cioccolato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#tessitura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#tessitura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1302,6 +1312,33 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AbbacchioRomano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AbbacchioRomano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#AbbacchioRomanoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/12"/>
+        <allevamento>allevati allo stato brado e semibrado</allevamento>
+        <colore>rosa chiaro e grasso di copertura bianco</colore>
+        <consistenza>compatta, leggermente infiltrata di grasso</consistenza>
+        <macellazione>tra 28 e 40 giorni di età</macellazione>
+        <materiaPrima>agnelli maschi e femmine appartenenti ai tipi genetici: razza Sarda e suoi incroci, Comisana e suoi incroci, Sopravvissana e suoi incroci, Massese e suoi incroci, Merinizzata Italiana e suoi incroci</materiaPrima>
+        <nomeProdotto>Abbacchio Romano</nomeProdotto>
+        <tessitura>fine</tessitura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AbbacchioRomanoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AbbacchioRomanoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigure -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigure">
@@ -1403,6 +1440,48 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmiliaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaDaLatte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaDaLatte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/20"/>
+        <allevamento>alimentato con solo latte materno (allattamento naturale); l&apos;allevamento avviene prevalentemente allo stato brado caratterizzato da ampi spazi esposti a forte insolazione, ai venti ed al clima della Sardegna; solo nel periodo invernale e nel corso della notte gli agnelli possono essere ricoverati in idonee strutture</allevamento>
+        <colore>carne: rosa chiaro; grasso: bianco</colore>
+        <consistenza>solida (assenza di sierosità)</consistenza>
+        <materiaPrima>agnelli nati, allevati e macellati in Sardegna</materiaPrima>
+        <nomeProdotto>Agnello di Sardegna da latte</nomeProdotto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaLeggero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaLeggero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/20"/>
+        <allevamento>alimentato con latte materno e integrato con alimenti naturali (foraggi e cereali) freschi e/o essiccati; l&apos;allevamento avviene prevalentemente allo stato brado caratterizzato da ampi spazi esposti a forte insolazione, ai venti ed al clima della Sardegna; solo nel periodo invernale e nel corso della notte gli agnelli possono essere ricoverati in idonee strutture</allevamento>
+        <colore>carne: rosa chiaro o rosa; grasso: bianco</colore>
+        <consistenza>solida (assenza di sierosità)</consistenza>
+        <materiaPrima>agnelli nati, allevati e macellati in Sardegna</materiaPrima>
+        <nomeProdotto>Agnello di Sardegna leggero</nomeProdotto>
     </owl:NamedIndividual>
     
 
@@ -1534,6 +1613,35 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CappellacciDiZuccaFerraresi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CappellacciDiZuccaFerraresi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CappellacciDiZuccaFerraresiDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/08"/>
+        <aspettoEsterno>colore giallo tipico della pasta all&apos;uovo con tonalità più intense in corrispondenza del ripieno per la presenza della polpa gialla della zucca</aspettoEsterno>
+        <aspettoInterno>colore giallo della zucca matura</aspettoInterno>
+        <consistenza>impasto avente consistenza media tendente al morbido</consistenza>
+        <dimensioni>diametro da 4 a 7 cm</dimensioni>
+        <forma>tondeggiante e ripiegata, ad imitazione del tipico cappello di paglia dei contadini</forma>
+        <materiaPrima>sfoglia: miscela di farina di grano tenero e uova; ripieno: lavorazione e cottura di polpa di zucca gialla &apos;violina&apos;, formaggio grattugiato e noce moscata</materiaPrima>
+        <nomeProdotto>Cappellacci di zucca ferraresi</nomeProdotto>
+        <peso>da 10 a 28 grammi</peso>
+        <sapore>di pasta sfoglia con percezione del contrasto tra il dolce della zucca e il salato del formaggio con sentore di noce moscata</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CappellacciDiZuccaFerraresiDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CappellacciDiZuccaFerraresiDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestum -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestum">
@@ -1582,6 +1690,34 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CilentoDisciplinare -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CilentoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CintaSenese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CintaSenese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CintaSeneseDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#DOP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/09"/>
+        <allevamento>alimentazione fornita dal pascolo in bosco e/o in terreni nudi seminati con essenze foraggere e cerealicole; i suini dalla cui si ricavano porzioni designabili «Cinta Senese» D.O.P sono esclusivamente derivanti dall&apos;accoppiamento di soggetti entrambi iscritti al Registro Anagrafico e/o Libro Genealogico del tipo genetico Cinta Senese</allevamento>
+        <colore>rosa acceso e/o rosso</colore>
+        <consistenza>compatta, leggermente infiltrata di grasso, tenera, con aroma della
+carne fresca</consistenza>
+        <macellazione>dopo i 12 mesi di età</macellazione>
+        <materiaPrima>suini nati, allevati e macellati in Toscana</materiaPrima>
+        <nomeProdotto>Cinta Senese</nomeProdotto>
+        <tessitura>fine</tessitura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CintaSeneseDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CintaSeneseDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
     </owl:NamedIndividual>
     
@@ -1680,6 +1816,34 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CozzaDiScardovariDisciplinare -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CozzaDiScardovariDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastraDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/20"/>
+        <colore>sfoglia: bianco tendente al giallo; ripieno: giallo più intenso con possibili striature verdastre dovute alla presenza di menta e/o basilico</colore>
+        <consistenza>molle, con impasto omogeneo</consistenza>
+        <forma>il prodotto finito assume una forma a fagottino che presenta, sul lato convesso, una tipica chiusura che ricorda la spiga del grano</forma>
+        <materiaPrima>pasta fresca; ripieno costituito da una miscela di patate fresche o disidratate in fiocchi, formaggi, grassi vegetali e/o animali, aromi</materiaPrima>
+        <nomeProdotto>Culurgionis d’Ogliastra</nomeProdotto>
+        <odore>intenso dovuto alle semole e alle farine e alla presenza di erbe aromatiche o spezie (menta, basilico, aglio, cipolla)</odore>
+        <peso>varia da un minimo di g 20 ad un massimo di g 33</peso>
+        <sapore>acidulo e aromatizzato, più o meno intenso al palato a seconda della miscela di formaggi, leggermente stemperato dal gusto dolce delle patate; retrogusto speziato</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastraDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastraDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
     </owl:NamedIndividual>
     
@@ -1837,6 +2001,29 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#LimoneCostaAmalfiDisciplinare -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#LimoneCostaAmalfiDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofilone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofilone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofiloneDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/11"/>
+        <dimensioni>lunghezza da 35 a 60 cm; larghezza da 0,80 a 1,20 mm; spessore da 0,3 a 0,7 mm;</dimensioni>
+        <materiaPrima>impasto di uova fresche e semola di grano duro o farina di grano tenero doppio zero</materiaPrima>
+        <nomeProdotto>Maccheroncini di Campofilone</nomeProdotto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofiloneDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofiloneDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
     </owl:NamedIndividual>
     
@@ -2033,6 +2220,34 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnanoDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
+        <aspettoEsterno>omogeneo senza macchie bianche o nere; assenza di bolle d&apos;aria, di fessure o
+tagli, di muffe, larve o parassiti e di corpi estranei</aspettoEsterno>
+        <colore>giallo paglierino</colore>
+        <consistenza>soda ed elastica alla cottura</consistenza>
+        <materiaPrima>impasto della semola di grano duro con acqua della falda acquifera locale</materiaPrima>
+        <nomeProdotto>Pasta di Gragnano</nomeProdotto>
+        <odore>di grano maturo</odore>
+        <sapore>sapido con gusto deciso di grano duro</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnanoDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnanoDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentina -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentina">
@@ -2055,6 +2270,30 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentinaDisciplinare -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentinaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellinaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/03"/>
+        <colore>marrone piu&apos; o meno scuro con presenza di parti tegumentali di colore nocciola/grigio, tipico del grano saraceno</colore>
+        <consistenza>dopo la lavorazione, hanno consistenza semidura; mentre si presentano secchi e duri, se essiccati</consistenza>
+        <materiaPrima>impasto di grano saraceno, Fagopyrum esculentum, e sfarinati di altri cereali</materiaPrima>
+        <sapore>delicato e tipico dei prodotti ottenuti con grano saraceno ed altri sfarinati</sapore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellinaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellinaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
     </owl:NamedIndividual>
     
@@ -2326,6 +2565,31 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#VitelloniPiemontesiDellaCoscia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#VitelloniPiemontesiDellaCoscia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarneFresca"/>
+        <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#VitelloniPiemontesiDellaCosciaDisciplinare"/>
+        <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
+        <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
+        <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/01"/>
+        <allevamento>allevati nella stessa azienda dello svezzamento e alimentati con foraggi conservati provenienti, per almeno il 70%, da prati naturali costituiti da essenze spontanee della zona di produzione e/o da prati artificiali costituiti prevalentemente da graminacee e/o leguminose</allevamento>
+        <colore>varia dal rosato al rosso chiaro brillante</colore>
+        <macellazione>dopo i 12 mesi di età</macellazione>
+        <materiaPrima>bovini maschi e femmine di razza Piemontese iscritti al relativo Libro Genealogico o figli di entrambi i genitori iscritti al Libro Genealogico</materiaPrima>
+        <nomeProdotto>Vitelloni Piemontesi della coscia</nomeProdotto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#VitelloniPiemontesiDellaCosciaDisciplinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#VitelloniPiemontesiDellaCosciaDisciplinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.salvatoremolettieri.com -->
 
     <owl:NamedIndividual rdf:about="https://www.salvatoremolettieri.com">
@@ -2445,6 +2709,12 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
     
 
 
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/11 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/11"/>
+    
+
+
     <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/12 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/12"/>
@@ -2472,6 +2742,12 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
     <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/19 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/19"/>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/20 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/20"/>
 </rdf:RDF>
 
 
