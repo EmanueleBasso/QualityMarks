@@ -8,6 +8,8 @@ module.exports = async function (request, response){
     var provincia = request.body.provincia
     var mese = request.body.mese
     var categoria = request.body.categoria
+    var ordinamento = request.body.ordinamento
+    var ordinamentoModo = request.body.ordinamentoModo
 
     /*  QUERY:
 
@@ -57,6 +59,7 @@ module.exports = async function (request, response){
                 ?individual prodotti-qualita:organizzatore ?organizzatore.
                 ?individual prodotti-qualita:haSitoWeb ?sitoWeb.
             }
+            ORDER BY ASC/DESC("variabile")
     */
 
     var query = `SELECT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione
@@ -117,6 +120,8 @@ module.exports = async function (request, response){
               ?individual prodotti-qualita:organizzatore ?organizzatore.
               ?individual prodotti-qualita:haSitoWeb ?sitoWeb.
             }`
+
+    query += 'ORDER BY ' + ordinamentoModo + '(?' + ordinamento + ')'
 
     connection.query(query, true)
         .then((res) => {

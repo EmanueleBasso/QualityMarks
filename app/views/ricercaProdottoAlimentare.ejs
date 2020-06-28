@@ -118,7 +118,7 @@
                                                 <div class="form-group col-md-6">
                                                     <label for="inputQuery">Nome Prodotto</label> <input class="form-control" id="inputQuery" aria-describedby="" placeholder="Cerca..." />
                                                 </div>
-                                                <div class="form-group col-md-3">
+                                                <div class="form-group col-md-2">
                                                     <label for="inputMarchio">Tipo Marchio Posseduto</label>
                                                     <select id="inputMarchio" class="form-control">
                                                         <option selected="selected" value="">Seleziona...</option>
@@ -129,15 +129,6 @@
                                                         <option value="STG">STG</option>
                                                     </select>
                                                 </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="inputCategoria">Categoria di appartenza</label>
-                                                    <select id="inputCategoria" class="form-control">
-                                                        <option selected="selected" value="">Seleziona...</option>
-                                                        <option value="Vino">Vino</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
                                                 <div class="form-group col-md-2">
                                                     <label for="inputRegione">Regione</label>
                                                     <select id="inputRegione" class="form-control">
@@ -169,6 +160,25 @@
                                                     <select id="inputNazione" class="form-control">
                                                         <option selected="selected" value="">Seleziona...</option>
                                                         <option value="Italia">Italia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-2">
+                                                    <label for="inputOrdine">Ordina per</label>
+                                                    <select id="inputOrdine" class="form-control">
+                                                        <option selected="selected" value="nomeProdotto">Nome prodotto</option>
+                                                        <option value="tipologia">Tipologia</option>
+                                                        <option value="nomeMarchio">Tipo marchio</option>
+                                                        <option value="nomeRegione">Regione</option>
+                                                        <option value="nomeNazione">Nazione</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                    <label for="inputOrdineModo">&nbsp;</label>
+                                                    <select id="inputOrdineModo" class="form-control">
+                                                        <option selected="selected" value="ASC">Ascendente</option>
+                                                        <option value="DESC">Discendente</option>
                                                     </select>
                                                 </div>
                                             </div>

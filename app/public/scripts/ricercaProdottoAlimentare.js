@@ -16,9 +16,10 @@ function query(){
 
     request['query'] = $('#inputQuery').val()
     request['marchio'] = $('#inputMarchio').val()
-    request['categoria'] = $('#inputCategoria').val()
     request['regione'] = $('#inputRegione').val()
     request['nazione'] = $('#inputNazione').val()
+    request['ordinamento'] = $('#inputOrdine').val()
+    request['ordinamentoModo'] = $('#inputOrdineModo').val()
 
     $.ajax({
         method: 'POST',
@@ -45,6 +46,7 @@ function query(){
                                 <input type="hidden" name="nomeMarchio" value="` + element.nomeMarchio.value + `" />
                                 <input type="hidden" name="nomeNazione" value="` + element.nomeNazione.value + `" />
                                 <input type="hidden" name="nomeRegione" value="` + element.nomeRegione.value + `" />
+                                <input type="hidden" name="tipologia" value="` + element.tipologia.value + `" />
                                 <div class="email-list-item peers fxw-nw p-20 bdB bgcH-grey-100 cur-p" onclick="this.parentNode.submit()">
                                     <div class="peer peer-greed ov-h">
                                         <h5 class="fsz-def tt-c c-grey-900" style="float:left;">` + element.nomeProdotto.value + `&nbsp;</h5><h5 class="fsz-def tt-c">(` + element.nomeMarchio.value + `)</h5>

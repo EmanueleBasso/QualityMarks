@@ -6,6 +6,7 @@ module.exports = async function (request, response){
     var nomeMarchio = request.body.nomeMarchio
     var nomeNazione = request.body.nomeNazione
     var nomeRegione = request.body.nomeRegione
+    var tipologia = request.body.tipologia
 
     /*  QUERY:
 
@@ -24,6 +25,7 @@ module.exports = async function (request, response){
             payload['nomeMarchio'] = nomeMarchio
             payload['nomeNazione'] = nomeNazione
             payload['nomeRegione'] = nomeRegione
+            payload['tipologia'] = tipologia
 
             // Pure gli altri file
             payload['nomeFileDisciplinare'] = res[iriProdotto][ontologyIri + 'haDisciplinare'][0]['value'].split('#')[1] + '.pdf'
@@ -137,11 +139,7 @@ module.exports = async function (request, response){
                         }
                     })
                 }))
-            })
-            
-            
-            
-            .then(() => {
+            }).then(() => {
                 logger.info(payload)
                 response.render('infoProdottoAlimentare', {payload})
             })
@@ -348,6 +346,7 @@ function getInfoAzienda(azienda){
                     FILTER(LANG(?nomeNazione) = "it")
                 }
             }
+            ORDER BY ASC(?nome)
     */
 
     var query = `SELECT ?nome, ?indirizzo, ?cap, ?email, ?numeroTelefono, ?nomeCitta, ?nomeProvincia, ?nomeNazione
@@ -378,7 +377,8 @@ function getInfoAzienda(azienda){
             GRAPH ?g3{
                 ?nazione l0:name ?nomeNazione.
                 FILTER(LANG(?nomeNazione) = "it")
-            }}`
+            }}
+            ORDER BY ASC(?nome)`
 
     return connection.query(query, true)
         .then((res) => {
@@ -431,6 +431,7 @@ function getInfoEvento(evento){
                     FILTER(LANG(?nomeNazione) = "it")
                 }
             }
+            ORDER BY ASC(?titolo)
     */
 
     var query = `SELECT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione
@@ -467,7 +468,8 @@ function getInfoEvento(evento){
             GRAPH ?g4{
                 ?nazione l0:name ?nomeNazione.
                 FILTER(LANG(?nomeNazione) = "it")
-            }}`
+            }}
+            ORDER BY ASC(?titolo)`
 
     return connection.query(query, true)
         .then((res) => {

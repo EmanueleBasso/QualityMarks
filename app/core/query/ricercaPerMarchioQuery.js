@@ -6,13 +6,15 @@ module.exports = async function (request, response){
     var categoria = request.body.categoria
     var regione = request.body.regione
     var nazione = request.body.nazione
+    var ordinamento = request.body.ordinamento
+    var ordinamentoModo = request.body.ordinamentoModo
 
     /*  QUERY:
 
             PREFIX prodotti-qualita: <http://www.semanticweb.org/progettoWS/prodotti-qualita#>
             PREFIX l0: <https://w3id.org/italia/onto/l0/>
 
-            SELECT ?individual, ?nomeProdotto, ?nomeMarchio, ?nomeRegione, ?nomeNazione
+            SELECT ?individual, ?nomeProdotto, ?tipologia, ?nomeMarchio, ?nomeRegione, ?nomeNazione
 
             FROM NAMED <http://localhost:8890/regions>
             FROM NAMED <http://localhost:8890/italy>
@@ -20,7 +22,8 @@ module.exports = async function (request, response){
             WHERE{
                 ?individual a ?class.
                 ?class rdfs:subClassOf prodotti-qualita:ProdottoAlimentare.
-                opp       ?individual a prodotti-qualita:class.
+                ?class rdfs:label ?tipologia.
+                opt       FILTER(?tipologia = "tipologia")
 
                 ?individual prodotti-qualita:nomeProdotto ?nomeProdotto.
 
@@ -41,20 +44,21 @@ module.exports = async function (request, response){
                     opt FILTER(str(?nomeNazione) = "nazione")
                 }
             }
+            ORDER BY ASC/DESC("variabile")
     */
 
-    var query = `SELECT ?individual, ?nomeProdotto, ?nomeMarchio, ?nomeRegione, ?nomeNazione
+    var query = `SELECT ?individual, ?nomeProdotto, ?tipologia, ?nomeMarchio, ?nomeRegione, ?nomeNazione
 
                  FROM NAMED <http://localhost:8890/regions>
                  FROM NAMED <http://localhost:8890/italy>
 
-                 WHERE{`
+                 WHERE{
+                    ?individual a ?class.
+                    ?class rdfs:subClassOf prodotti-qualita:ProdottoAlimentare.
+                    ?class rdfs:label ?tipologia.`
 
     if(categoria) {
-        query += '?individual a prodotti-qualita:' + categoria + '.'
-    } else {
-        query += `?individual a ?class.
-                  ?class rdfs:subClassOf prodotti-qualita:ProdottoAlimentare.`
+        query += 'FILTER(?tipologia = "' + categoria + '")'
     }
             
     query += `?individual prodotti-qualita:nomeProdotto ?nomeProdotto.
@@ -86,11 +90,10 @@ module.exports = async function (request, response){
 
     query += '}}'
 
+    query += 'ORDER BY ' + ordinamentoModo + '(?' + ordinamento + ')'
+
     connection.query(query, true)
         .then((res) => {
-            res.results.bindings.forEach(x => x['tipologia'] = {value: "TODO"})
-            // Dato il nome della classe ottenere il nome visualizzabile dall'annotazione
-
             logger.info(res.results.bindings)
             response.send(res.results.bindings)
         })

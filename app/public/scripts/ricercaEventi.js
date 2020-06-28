@@ -285,6 +285,8 @@ function query(){
     request['provincia'] = $('#inputProvincia').val()
     request['mese'] = $('#inputMese').val()
     request['categoria'] = $('#inputCategoria').val()
+    request['ordinamento'] = $('#inputOrdine').val()
+    request['ordinamentoModo'] = $('#inputOrdineModo').val()
 
     $.ajax({
         method: 'POST',
