@@ -311,15 +311,29 @@ function query(){
                 var node = `<div class="email-list-item peers fxw-nw p-20 bdB bgcH-grey-100">
                                     <div class="peer peer-greed ov-h">
                                         <h5 class="fsz-def tt-c c-grey-900">` + element.titolo.value + `</h5>
+                                        <span>Tipologia: ` + element.tipologia.value + `</span>
+                                        <br/>
                                         <span>Periodo: ` + element.mese.value + `</span>
                                         <br/>
-                                        <span>` + element.indirizzo.value + ` - ` + element.nomeCitta.value + ` (` + element.nomeProvincia.value + `), ` + element.nomeRegione.value + `, ` + element.nomeNazione.value + `</span>
+                                        <span>`
+                
+                if(element.indirizzo.value !== ""){
+                    node += element.indirizzo.value + ` - `
+                }
+                
+                node += element.nomeCitta.value + ` (` + element.nomeProvincia.value + `), ` + element.nomeRegione.value + `, ` + element.nomeNazione.value + `</span>
                                         <br/>
                                         <span>Organizzatore: ` + element.organizzatore.value + `</span>
                                         <br/>
-                                        <span>Sito Web: <a href="` + element.sitoWeb.value + `" target="_blank">` + element.sitoWeb.value + `</a></span>
-                                    </div>
-                                </div>`
+                                        <span>Sito Web: `
+
+                if(element.sitoWeb.value !== "-"){
+                    node += `<a href="` + element.sitoWeb.value + `" target="_blank">` + element.sitoWeb.value + `</a></span>`
+                }else{
+                    node += '-'
+                }
+
+                node += `</div></div>`
 
                 attach += node
             })

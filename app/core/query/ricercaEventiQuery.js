@@ -16,7 +16,7 @@ module.exports = async function (request, response){
             PREFIX prodotti-qualita: <http://www.semanticweb.org/progettoWS/prodotti-qualita#>
             PREFIX l0: <https://w3id.org/italia/onto/l0/>
 
-            SELECT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione
+            SELECT DISTINCT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione, ?tipologia
 
             FROM NAMED <http://localhost:8890/cities>
             FROM NAMED <http://localhost:8890/provinces>
@@ -55,14 +55,19 @@ module.exports = async function (request, response){
                 opt FILTER(?mese = "mese")
                 
                 ?individual prodotti-qualita:haTitolo ?titolo.
-                ?individual prodotti-qualita:haIndirizzo ?indirizzo.
-                ?individual prodotti-qualita:organizzatore ?organizzatore.
-                ?individual prodotti-qualita:haSitoWeb ?sitoWeb.
+                OPTIONAL{?individual prodotti-qualita:haIndirizzo ?indirizzo.}
+                OPTIONAL{?individual prodotti-qualita:organizzatore ?organizzatore.}
+                OPTIONAL{?individual prodotti-qualita:haSitoWeb ?sitoWeb.}
+
+                ?individual prodotti-qualita:promuove ?prodotto.
+                ?prodotto a ?class.
+                ?class rdfs:label ?tipologia.
+                opt FILTER(str(?tipologia) = "tipologia")
             }
             ORDER BY ASC/DESC("variabile")
     */
 
-    var query = `SELECT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione
+    var query = `SELECT DISTINCT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione, ?tipologia
 
                  FROM NAMED <http://localhost:8890/cities>
                  FROM NAMED <http://localhost:8890/provinces>
@@ -116,17 +121,34 @@ module.exports = async function (request, response){
     }
 
     query += `?individual prodotti-qualita:haTitolo ?titolo.
-              ?individual prodotti-qualita:haIndirizzo ?indirizzo.
-              ?individual prodotti-qualita:organizzatore ?organizzatore.
-              ?individual prodotti-qualita:haSitoWeb ?sitoWeb.
-            }`
+              OPTIONAL{?individual prodotti-qualita:haIndirizzo ?indirizzo.}
+              OPTIONAL{?individual prodotti-qualita:organizzatore ?organizzatore.}
+              OPTIONAL{?individual prodotti-qualita:haSitoWeb ?sitoWeb.}
 
-    query += 'ORDER BY ' + ordinamentoModo + '(?' + ordinamento + ')'
+              ?individual prodotti-qualita:promuove ?prodotto.
+              ?prodotto a ?class.
+              ?class rdfs:label ?tipologia.`
+
+    if(categoria) {
+        query += 'FILTER(str(?tipologia) = "' + categoria + '")'
+    }
+
+    query += `}
+             ORDER BY ` + ordinamentoModo + `(?` + ordinamento + `)`
 
     connection.query(query, true)
         .then((res) => {
-            res.results.bindings.forEach(x => x['categoria'] = {value: "TODO"})
-            // Dato il nome della classe ottenere il nome visualizzabile dall'annotazione
+            res.results.bindings.forEach((element) => {
+                if(element['indirizzo'] === undefined){
+                    element['indirizzo'] = {value: ""}
+                }
+                if(element['sitoWeb'] === undefined){
+                    element['sitoWeb'] = {value: "-"}
+                }
+                if(element['organizzatore'] === undefined){
+                    element['organizzatore'] = {value: "-"}
+                }
+            })
 
             logger.info(res.results.bindings)
             response.send(res.results.bindings)

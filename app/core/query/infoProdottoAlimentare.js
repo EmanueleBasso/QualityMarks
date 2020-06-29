@@ -127,6 +127,16 @@ module.exports = async function (request, response){
                 await Promise.all(eventi.map(async (element) => {
                     await getInfoEvento(element).then((res) => {
                         if(res.length != 0){
+                            if(res[0]['indirizzo'] === undefined){
+                                res[0]['indirizzo'] = {value: ""}
+                            }
+                            if(res[0]['sitoWeb'] === undefined){
+                                res[0]['sitoWeb'] = {value: "-"}
+                            }
+                            if(res[0]['organizzatore'] === undefined){
+                                res[0]['organizzatore'] = {value: "-"}
+                            }
+
                             var obj = {
                                 "titolo": res[0]['titolo'].value,
                                 "indirizzo": res[0]['indirizzo'].value,
@@ -409,10 +419,10 @@ function getInfoEvento(evento){
 
             WHERE{
                 <evento> prodotti-qualita:haTitolo ?titolo.
-                <evento> prodotti-qualita:haIndirizzo ?indirizzo.
-                <evento> prodotti-qualita:organizzatore ?organizzatore.
+                OPTIONAL{<evento> prodotti-qualita:haIndirizzo ?indirizzo.}
+                OPTIONAL{<evento> prodotti-qualita:organizzatore ?organizzatore.}
                 <evento> prodotti-qualita:nelMese ?mese.
-                <evento> prodotti-qualita:haSitoWeb ?sitoWeb.
+                OPTIONAL{<evento> prodotti-qualita:haSitoWeb ?sitoWeb.}
 
                 <evento> prodotti-qualita:citta ?citta.
                 GRAPH ?g1{
@@ -448,10 +458,10 @@ function getInfoEvento(evento){
                 WHERE{`
 
     query += '<' + evento + '> prodotti-qualita:haTitolo ?titolo.'
-    query += '<' + evento + '> prodotti-qualita:haIndirizzo ?indirizzo.'
-    query += '<' + evento + '> prodotti-qualita:organizzatore ?organizzatore.'
+    query += 'OPTIONAL{<' + evento + '> prodotti-qualita:haIndirizzo ?indirizzo.}'
+    query += 'OPTIONAL{<' + evento + '> prodotti-qualita:organizzatore ?organizzatore.}'
     query += '<' + evento + '> prodotti-qualita:nelMese ?mese.'
-    query += '<' + evento + '> prodotti-qualita:haSitoWeb ?sitoWeb.'
+    query += 'OPTIONAL{<' + evento + '> prodotti-qualita:haSitoWeb ?sitoWeb.}'
 
     query += '<' + evento + `> prodotti-qualita:citta ?citta.
             GRAPH ?g1{

@@ -215,7 +215,7 @@
                                                     })
                                                     if(payload.aziedeProduttrici.length == 0){
                                                 %>
-                                                    <span>Nessuna informazione disponibile</span>
+                                                    <span>Nessuna azienda disponibile</span>
                                                 <% } %>
                                             </div>
                                         </div>
@@ -236,18 +236,28 @@
                                                         <h5 class="fsz-def tt-c c-grey-900"><%= element.titolo %></h5>
                                                         <span>Periodo: <%= element.mese %></span>
                                                         <br/>
-                                                        <span><%= element.indirizzo %> - <%= element.nomeCitta %> (<%= element.nomeProvincia %>), <%= element.nomeRegione %>, <%= element.nomeNazione %></span>
+                                                        <span>
+                                                        <% if(element.indirizzo !== ""){ %>
+                                                        <%= element.indirizzo %> - 
+                                                        <% } %>                                                           
+                                                        <%= element.nomeCitta %> (<%= element.nomeProvincia %>), <%= element.nomeRegione %>, <%= element.nomeNazione %></span>
                                                         <br/>
                                                         <span>Organizzatore: <%= element.organizzatore %></span>
                                                         <br/>
-                                                        <span>Sito Web: <a href="<%= element.sitoWeb %>" target="_blank" onclick="event.stopPropagation();"><%= element.sitoWeb %></a></span>
+                                                        <span>Sito Web: 
+                                                        <% if(element.sitoWeb !== "-"){ %>
+                                                        <a href="<%= element.sitoWeb %>" target="_blank" onclick="event.stopPropagation();"><%= element.sitoWeb %></a>
+                                                        <% }else{ %>
+                                                        -
+                                                        <% } %>
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <%
                                                     })
-                                                    if(payload.aziedeProduttrici.length == 0){
+                                                    if(payload.eventi.length == 0){
                                                 %>
-                                                    <span>Nessuna informazione disponibile</span>
+                                                    <span>Nessuna evento disponibile</span>
                                                 <% } %>
                                             </div>
                                         </div>
