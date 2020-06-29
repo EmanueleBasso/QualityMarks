@@ -33,10 +33,7 @@ module.exports = async function (request, response){
             payload['caratteristiche'] = []
 
             for(var property in res[iriProdotto]){
-                if(property == 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'){
-                    var nomeClasse = res[iriProdotto][property][1]['value']
-                    // Dato il nome della classe ottenere il nome visualizzabile dall'annotazione
-                }else if(property == (ontologyIri + 'nomeProdotto')){
+                if(property == (ontologyIri + 'nomeProdotto')){
                     payload['nomeProdotto'] = res[iriProdotto][property][0]['value']
                 }else if(res[iriProdotto][property][0]['type'] == 'literal'){
                     var nome = property.split('#')[1].replace(/([A-Z])/g, ' $1').trim().toLowerCase()
@@ -68,6 +65,13 @@ module.exports = async function (request, response){
 
             getInfoSocietaVigilante(societaVigilante).then((res) =>{
                 if(res.length != 0){
+                    if(res[0]['fax'] === undefined){
+                        res[0]['fax'] = {value: "-"}
+                    }
+                    if(res[0]['partitaIva'] === undefined){
+                        res[0]['partitaIva'] = {value: "-"}
+                    }
+
                     payload['societaVigilante'] = {
                         "nome": res[0]['nome'].value,
                         "fax": res[0]['fax'].value,
@@ -149,7 +153,7 @@ module.exports = async function (request, response){
         })
 }
 
-function getInfoSocietaVigilante(societaVigilanteIri){
+function getInfoSocietaVigilante(societaVigilante){
     /*  QUERY:
 
             PREFIX prodotti-qualita: <http://www.semanticweb.org/progettoWS/prodotti-qualita#>
@@ -162,26 +166,26 @@ function getInfoSocietaVigilante(societaVigilanteIri){
             FROM NAMED <http://localhost:8890/italy>
 
             WHERE{
-                <societaVigilanteIri> prodotti-qualita:haNome ?nome.
-                <societaVigilanteIri> prodotti-qualita:haFax ?fax.
-                <societaVigilanteIri> prodotti-qualita:haIndirizzo ?indirizzo.
-                <societaVigilanteIri> prodotti-qualita:haCAP ?cap.
-                <societaVigilanteIri> prodotti-qualita:haPartitaIVA ?partitaIva.
-                <societaVigilanteIri> prodotti-qualita:haSitoWeb ?sitoWeb.
-                <societaVigilanteIri> prodotti-qualita:haEmail ?email.
-                <societaVigilanteIri> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.
+                <societaVigilante> prodotti-qualita:haNome ?nome.
+                OPTIONAL{<societaVigilante> prodotti-qualita:haFax ?fax.}
+                <societaVigilante> prodotti-qualita:haIndirizzo ?indirizzo.
+                <societaVigilante> prodotti-qualita:haCAP ?cap.
+                OPTIONAL{<societaVigilante> prodotti-qualita:haPartitaIVA ?partitaIva.}
+                <societaVigilante> prodotti-qualita:haSitoWeb ?sitoWeb.
+                <societaVigilante> prodotti-qualita:haEmail ?email.
+                <societaVigilante> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.
 
-                <societaVigilanteIri> prodotti-qualita:citta ?citta.
+                <societaVigilante> prodotti-qualita:citta ?citta.
                 GRAPH ?g1{
                     ?citta l0:name ?nomeCitta.
                 }
 
-                <societaVigilanteIri> prodotti-qualita:provincia ?provincia.
+                <societaVigilante> prodotti-qualita:provincia ?provincia.
                 GRAPH ?g2{
                     ?provincia l0:name ?nomeProvincia.
                 }
 
-                <societaVigilanteIri> prodotti-qualita:nazione ?nazione.
+                <societaVigilante> prodotti-qualita:nazione ?nazione.
                 GRAPH ?g3{
                     ?nazione l0:name ?nomeNazione.
                     FILTER(LANG(?nomeNazione) = "it")
@@ -197,26 +201,26 @@ function getInfoSocietaVigilante(societaVigilanteIri){
 
                 WHERE{`
 
-    query += '<' + societaVigilanteIri + '> prodotti-qualita:haNome ?nome.'
-    query += '<' + societaVigilanteIri + '> prodotti-qualita:haFax ?fax.'
-    query += '<' + societaVigilanteIri + '> prodotti-qualita:haIndirizzo ?indirizzo.'
-    query += '<' + societaVigilanteIri + '> prodotti-qualita:haCAP ?cap.'
-    query += '<' + societaVigilanteIri + '> prodotti-qualita:haPartitaIVA ?partitaIva.'
-    query += '<' + societaVigilanteIri + '> prodotti-qualita:haSitoWeb ?sitoWeb.'
-    query += '<' + societaVigilanteIri + '> prodotti-qualita:haEmail ?email.'
-    query += '<' + societaVigilanteIri + '> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.'
+    query += '<' + societaVigilante + '> prodotti-qualita:haNome ?nome.'
+    query += 'OPTIONAL{<' + societaVigilante + '> prodotti-qualita:haFax ?fax.}'
+    query += '<' + societaVigilante + '> prodotti-qualita:haIndirizzo ?indirizzo.'
+    query += '<' + societaVigilante + '> prodotti-qualita:haCAP ?cap.'
+    query += 'OPTIONAL{<' + societaVigilante + '> prodotti-qualita:haPartitaIVA ?partitaIva.}'
+    query += '<' + societaVigilante + '> prodotti-qualita:haSitoWeb ?sitoWeb.'
+    query += '<' + societaVigilante + '> prodotti-qualita:haEmail ?email.'
+    query += '<' + societaVigilante + '> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.'
 
-    query += '<' + societaVigilanteIri + `> prodotti-qualita:citta ?citta.
+    query += '<' + societaVigilante + `> prodotti-qualita:citta ?citta.
             GRAPH ?g1{
                 ?citta l0:name ?nomeCitta.
             }`
 
-    query += '<' + societaVigilanteIri + `> prodotti-qualita:provincia ?provincia.
+    query += '<' + societaVigilante + `> prodotti-qualita:provincia ?provincia.
             GRAPH ?g2{
                 ?provincia l0:name ?nomeProvincia.
             }`
 
-    query += '<' + societaVigilanteIri + `> prodotti-qualita:nazione ?nazione.
+    query += '<' + societaVigilante + `> prodotti-qualita:nazione ?nazione.
             GRAPH ?g3{
                 ?nazione l0:name ?nomeNazione.
                 FILTER(LANG(?nomeNazione) = "it")

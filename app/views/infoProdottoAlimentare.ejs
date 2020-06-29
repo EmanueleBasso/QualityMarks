@@ -150,19 +150,23 @@
                             <div class="masonry-item col-6">
                                 <div class="bgc-white p-20 bd c-grey-900" style="font-size: 1.2em;">
                                     <h5>Società Vigilante</h5>
-                                    <span><%= payload.societaVigilante.nome %></span>
-                                    <br/>
-                                    <span><%= payload.societaVigilante.indirizzo %> - <%= payload.societaVigilante.cap %> <%= payload.societaVigilante.nomeCitta %> (<%= payload.societaVigilante.nomeProvincia %>), <%= payload.societaVigilante.nomeNazione %></span>
-                                    <br/>
-                                    <span>Telefono: <%= payload.societaVigilante.numeroTelefono %></span>
-                                    <br/>
-                                    <span>Fax: <%= payload.societaVigilante.fax %></span>
-                                    <br/>
-                                    <span>Sito Web: <a href="<%= payload.societaVigilante.sitoWeb %>" target="_blank"><%= payload.societaVigilante.sitoWeb %></a></span>
-                                    <br/>
-                                    <span>Email: <%= payload.societaVigilante.email %></span>
-                                    <br/>
-                                    <span>Partita IVA: <%= payload.societaVigilante.partitaIva %></span>
+                                    <% if(payload.societaVigilante !== undefined){ %>
+                                        <span><%= payload.societaVigilante.nome %></span>
+                                        <br/>
+                                        <span><%= payload.societaVigilante.indirizzo %> - <%= payload.societaVigilante.cap %> <%= payload.societaVigilante.nomeCitta %> (<%= payload.societaVigilante.nomeProvincia %>), <%= payload.societaVigilante.nomeNazione %></span>
+                                        <br/>
+                                        <span>Telefono: <%= payload.societaVigilante.numeroTelefono %></span>
+                                        <br/>
+                                        <span>Fax: <%= payload.societaVigilante.fax %></span>
+                                        <br/>
+                                        <span>Sito Web: <a href="<%= payload.societaVigilante.sitoWeb %>" target="_blank"><%= payload.societaVigilante.sitoWeb %></a></span>
+                                        <br/>
+                                        <span>Email: <%= payload.societaVigilante.email %></span>
+                                        <br/>
+                                        <span>Partita IVA: <%= payload.societaVigilante.partitaIva %></span>
+                                    <% }else{ %>
+                                        <span>Informazione non disponibile</span>
+                                    <% } %>
                                 </div>
                             </div>
                             <div class="masonry-item col-6">
@@ -173,15 +177,19 @@
                             <div class="masonry-item col-6">
                                 <div class="bgc-white p-20 bd c-grey-900" style="font-size: 1.2em;">
                                     <h5>Consorzio di Tutela</h5>
-                                    <span><%= payload.consorzioTutela.nome %></span>
-                                    <br/>
-                                    <span><%= payload.consorzioTutela.indirizzo %> - <%= payload.consorzioTutela.cap %> <%= payload.consorzioTutela.nomeCitta %> (<%= payload.consorzioTutela.nomeProvincia %>), <%= payload.consorzioTutela.nomeNazione %></span>
-                                    <br/>
-                                    <span>Telefono: <%= payload.consorzioTutela.numeroTelefono %></span>
-                                    <br/>
-                                    <span>Sito Web: <a href="<%= payload.consorzioTutela.sitoWeb %>" target="_blank"><%= payload.consorzioTutela.sitoWeb %></a></span>
-                                    <br/>
-                                    <span>Email: <%= payload.consorzioTutela.email %></span>
+                                    <% if(payload.consorzioTutela !== undefined){ %>
+                                        <span><%= payload.consorzioTutela.nome %></span>
+                                        <br/>
+                                        <span><%= payload.consorzioTutela.indirizzo %> - <%= payload.consorzioTutela.cap %> <%= payload.consorzioTutela.nomeCitta %> (<%= payload.consorzioTutela.nomeProvincia %>), <%= payload.consorzioTutela.nomeNazione %></span>
+                                        <br/>
+                                        <span>Telefono: <%= payload.consorzioTutela.numeroTelefono %></span>
+                                        <br/>
+                                        <span>Sito Web: <a href="<%= payload.consorzioTutela.sitoWeb %>" target="_blank"><%= payload.consorzioTutela.sitoWeb %></a></span>
+                                        <br/>
+                                        <span>Email: <%= payload.consorzioTutela.email %></span>
+                                    <% }else{ %>
+                                        <span>Informazione non disponibile</span>
+                                    <% } %>
                                 </div>
                             </div>
                             <div class="masonry-item col-12">
@@ -204,8 +212,11 @@
                                                     </div>
                                                 </div>
                                                 <%
-                                                    })                                         
+                                                    })
+                                                    if(payload.aziedeProduttrici.length == 0){
                                                 %>
+                                                    <span>Nessuna informazione disponibile</span>
+                                                <% } %>
                                             </div>
                                         </div>
                                     </div>
@@ -233,8 +244,11 @@
                                                     </div>
                                                 </div>
                                                 <%
-                                                    })                                         
+                                                    })
+                                                    if(payload.aziedeProduttrici.length == 0){
                                                 %>
+                                                    <span>Nessuna informazione disponibile</span>
+                                                <% } %>
                                             </div>
                                         </div>
                                     </div>
