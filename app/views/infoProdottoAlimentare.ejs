@@ -183,9 +183,19 @@
                                         <br/>
                                         <span>Telefono: <%= payload.consorzioTutela.numeroTelefono %></span>
                                         <br/>
-                                        <span>Sito Web: <a href="<%= payload.consorzioTutela.sitoWeb %>" target="_blank"><%= payload.consorzioTutela.sitoWeb %></a></span>
+                                        <span>Fax: <%= payload.consorzioTutela.fax %></span>
+                                        <br/>
+                                        <span>Sito Web: 
+                                        <% if(payload.consorzioTutela.sitoWeb !== "-"){ %>
+                                        <a href="<%= payload.consorzioTutela.sitoWeb %>" target="_blank"><%= payload.consorzioTutela.sitoWeb %></a>
+                                        <% }else{ %>
+                                        -
+                                        <% } %>
+                                        </span>
                                         <br/>
                                         <span>Email: <%= payload.consorzioTutela.email %></span>
+                                        <br/>
+                                        <span>Partita IVA: <%= payload.consorzioTutela.partitaIva %></span>
                                     <% }else{ %>
                                         <span>Informazione non disponibile</span>
                                     <% } %>
@@ -206,6 +216,14 @@
                                                         <span><%= element.indirizzo %> - <%= element.cap %> <%= element.nomeCitta %> (<%= element.nomeProvincia %>), <%= element.nomeNazione %></span>
                                                         <br/>
                                                         <span>Telefono: <%= element.numeroTelefono %></span>
+                                                        <br/>
+                                                        <span>Sito Web: 
+                                                        <% if(element.sitoWeb !== "-"){ %>
+                                                        <a href="<%= element.sitoWeb %>" target="_blank" onclick="event.stopPropagation();"><%= element.sitoWeb %></a>
+                                                        <% }else{ %>
+                                                        -
+                                                        <% } %>
+                                                        </span>
                                                         <br/>
                                                         <span>Email: <%= element.email %></span>
                                                     </div>

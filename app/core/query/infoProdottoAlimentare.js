@@ -88,6 +88,19 @@ module.exports = async function (request, response){
                 }
             }).then(getInfoConsorzioTutela(consorzioTutela).then((res) =>{
                 if(res.length != 0){
+                    if(res[0]['sitoWeb'] === undefined){
+                        res[0]['sitoWeb'] = {value: "-"}
+                    }
+                    if(res[0]['numeroTelefono'] === undefined){
+                        res[0]['numeroTelefono'] = {value: "-"}
+                    }
+                    if(res[0]['fax'] === undefined){
+                        res[0]['fax'] = {value: "-"}
+                    }
+                    if(res[0]['partitaIva'] === undefined){
+                        res[0]['partitaIva'] = {value: "-"}
+                    }
+
                     payload['consorzioTutela'] = {
                         "nome": res[0]['nome'].value,
                         "indirizzo": res[0]['indirizzo'].value,
@@ -95,6 +108,8 @@ module.exports = async function (request, response){
                         "sitoWeb": res[0]['sitoWeb'].value,
                         "email": res[0]['email'].value,
                         "numeroTelefono": res[0]['numeroTelefono'].value,
+                        "fax": res[0]['fax'].value,
+                        "partitaIva": res[0]['partitaIva'].value,
                         "nomeCitta": res[0]['nomeCitta'].value,
                         "nomeProvincia": res[0]['nomeProvincia'].value,
                         "nomeNazione": res[0]['nomeNazione'].value
@@ -106,12 +121,23 @@ module.exports = async function (request, response){
                 await Promise.all(aziendeProduttrici.map(async (element) => {
                     await getInfoAzienda(element).then((res) => {
                         if(res.length != 0){
+                            if(res[0]['sitoWeb'] === undefined){
+                                res[0]['sitoWeb'] = {value: "-"}
+                            }
+                            if(res[0]['email'] === undefined){
+                                res[0]['email'] = {value: "-"}
+                            }
+                            if(res[0]['numeroTelefono'] === undefined){
+                                res[0]['numeroTelefono'] = {value: "-"}
+                            }
+
                             var obj = {
                                 "nome": res[0]['nome'].value,
                                 "indirizzo": res[0]['indirizzo'].value,
                                 "cap": res[0]['cap'].value,
                                 "email": res[0]['email'].value,
                                 "numeroTelefono": res[0]['numeroTelefono'].value,
+                                "sitoWeb": res[0]['sitoWeb'].value,
                                 "nomeCitta": res[0]['nomeCitta'].value,
                                 "nomeProvincia": res[0]['nomeProvincia'].value,
                                 "nomeNazione": res[0]['nomeNazione'].value
@@ -252,7 +278,7 @@ function getInfoConsorzioTutela(consorzioTutela){
             PREFIX prodotti-qualita: <http://www.semanticweb.org/progettoWS/prodotti-qualita#>
             PREFIX l0: <https://w3id.org/italia/onto/l0/>
 
-            SELECT ?nome, ?indirizzo, ?cap, ?sitoWeb, ?email, ?numeroTelefono, ?nomeCitta, ?nomeProvincia, ?nomeNazione
+            SELECT ?nome, ?indirizzo, ?cap, ?sitoWeb, ?email, ?numeroTelefono, ?fax, ?partitaIva, ?nomeCitta, ?nomeProvincia, ?nomeNazione
 
             FROM NAMED <http://localhost:8890/cities>
             FROM NAMED <http://localhost:8890/provinces>
@@ -262,9 +288,11 @@ function getInfoConsorzioTutela(consorzioTutela){
                 <consorzioTutela> prodotti-qualita:haNome ?nome.
                 <consorzioTutela> prodotti-qualita:haIndirizzo ?indirizzo.
                 <consorzioTutela> prodotti-qualita:haCAP ?cap.
-                <consorzioTutela> prodotti-qualita:haSitoWeb ?sitoWeb.
+                OPTIONAL{<consorzioTutela> prodotti-qualita:haSitoWeb ?sitoWeb.}
                 <consorzioTutela> prodotti-qualita:haEmail ?email.
-                <consorzioTutela> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.
+                OPTIONAL{<consorzioTutela> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.}
+                OPTIONAL{<consorzioTutela> prodotti-qualita:haFax ?fax.}
+                OPTIONAL{<consorzioTutela> prodotti-qualita:haPartitaIVA ?partitaIva.}
 
                 <consorzioTutela> prodotti-qualita:citta ?citta.
                 GRAPH ?g1{
@@ -284,7 +312,7 @@ function getInfoConsorzioTutela(consorzioTutela){
             }
     */
 
-    var query = `SELECT ?nome, ?indirizzo, ?cap, ?sitoWeb, ?email, ?numeroTelefono, ?nomeCitta, ?nomeProvincia, ?nomeNazione
+    var query = `SELECT ?nome, ?indirizzo, ?cap, ?sitoWeb, ?email, ?numeroTelefono, ?fax, ?partitaIva, ?nomeCitta, ?nomeProvincia, ?nomeNazione
 
                 FROM NAMED <http://localhost:8890/cities>
                 FROM NAMED <http://localhost:8890/provinces>
@@ -295,9 +323,11 @@ function getInfoConsorzioTutela(consorzioTutela){
     query += '<' + consorzioTutela + '> prodotti-qualita:haNome ?nome.'
     query += '<' + consorzioTutela + '> prodotti-qualita:haIndirizzo ?indirizzo.'
     query += '<' + consorzioTutela + '> prodotti-qualita:haCAP ?cap.'
-    query += '<' + consorzioTutela + '> prodotti-qualita:haSitoWeb ?sitoWeb.'
+    query += 'OPTIONAL{<' + consorzioTutela + '> prodotti-qualita:haSitoWeb ?sitoWeb.}'
     query += '<' + consorzioTutela + '> prodotti-qualita:haEmail ?email.'
-    query += '<' + consorzioTutela + '> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.'
+    query += 'OPTIONAL{<' + consorzioTutela + '> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.}'
+    query += 'OPTIONAL{<' + consorzioTutela + '> prodotti-qualita:haFax ?fax.}'
+    query += 'OPTIONAL{<' + consorzioTutela + '> prodotti-qualita:haPartitaIVA ?partitaIva.}'
 
     query += '<' + consorzioTutela + `> prodotti-qualita:citta ?citta.
             GRAPH ?g1{
@@ -331,7 +361,7 @@ function getInfoAzienda(azienda){
             PREFIX prodotti-qualita: <http://www.semanticweb.org/progettoWS/prodotti-qualita#>
             PREFIX l0: <https://w3id.org/italia/onto/l0/>
 
-            SELECT ?nome, ?indirizzo, ?cap, ?email, ?numeroTelefono, ?nomeCitta, ?nomeProvincia, ?nomeNazione
+            SELECT ?nome, ?indirizzo, ?cap, ?email, ?numeroTelefono, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeNazione
 
             FROM NAMED <http://localhost:8890/cities>
             FROM NAMED <http://localhost:8890/provinces>
@@ -341,8 +371,9 @@ function getInfoAzienda(azienda){
                 <azienda> prodotti-qualita:haNome ?nome.
                 <azienda> prodotti-qualita:haIndirizzo ?indirizzo.
                 <azienda> prodotti-qualita:haCAP ?cap.
-                <azienda> prodotti-qualita:haEmail ?email.
-                <azienda> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.
+                OPTIONAL{<azienda> prodotti-qualita:haEmail ?email.}
+                OPTIONAL{<azienda> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.}
+                OPTIONAL{<azienda> prodotti-qualita:haSitoWeb ?sitoWeb.}
 
                 <azienda> prodotti-qualita:citta ?citta.
                 GRAPH ?g1{
@@ -363,7 +394,7 @@ function getInfoAzienda(azienda){
             ORDER BY ASC(?nome)
     */
 
-    var query = `SELECT ?nome, ?indirizzo, ?cap, ?email, ?numeroTelefono, ?nomeCitta, ?nomeProvincia, ?nomeNazione
+    var query = `SELECT ?nome, ?indirizzo, ?cap, ?email, ?numeroTelefono, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeNazione
 
                 FROM NAMED <http://localhost:8890/cities>
                 FROM NAMED <http://localhost:8890/provinces>
@@ -374,8 +405,9 @@ function getInfoAzienda(azienda){
     query += '<' + azienda + '> prodotti-qualita:haNome ?nome.'
     query += '<' + azienda + '> prodotti-qualita:haIndirizzo ?indirizzo.'
     query += '<' + azienda + '> prodotti-qualita:haCAP ?cap.'
-    query += '<' + azienda + '> prodotti-qualita:haEmail ?email.'
-    query += '<' + azienda + '> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.'
+    query += 'OPTIONAL{<' + azienda + '> prodotti-qualita:haEmail ?email.}'
+    query += 'OPTIONAL{<' + azienda + '> prodotti-qualita:haNumeroDiTelefono ?numeroTelefono.}'
+    query += 'OPTIONAL{<' + azienda + '> prodotti-qualita:haSitoWeb ?sitoWeb.}'
 
     query += '<' + azienda + `> prodotti-qualita:citta ?citta.
             GRAPH ?g1{
