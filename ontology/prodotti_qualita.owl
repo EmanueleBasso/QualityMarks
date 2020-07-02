@@ -1857,6 +1857,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AbbacchioRomanoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AbbacchioRomanoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigure -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigure">
@@ -1878,6 +1886,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigureDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigureZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcciugheSottoSaleDelMarLigureZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -1982,6 +1998,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoDiModenaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoDiModenaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiModena -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiModena">
@@ -2009,6 +2033,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiModenaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiModenaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmilia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmilia">
@@ -2031,6 +2063,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmiliaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmiliaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AcetoBalsamicoTradizionaleDiReggioEmiliaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -2100,6 +2140,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AglianicoDelTaburnoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AglianicoDelTaburnoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaDaLatte -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaDaLatte">
@@ -2138,6 +2186,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <consistenza>solida (assenza di sierosità)</consistenza>
         <materiaPrima>agnelli nati, allevati e macellati in Sardegna</materiaPrima>
         <nomeProdotto>Agnello di Sardegna leggero</nomeProdotto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AgnelloDiSardegnaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -2246,6 +2302,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AmatricianaTradizionaleDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#AmatricianaTradizionaleZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#AmatricianaTradizionaleZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -2666,6 +2730,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#BergamottoDiReggioCalabriaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BergamottoDiReggioCalabriaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#BioagricertSrl -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BioagricertSrl">
@@ -2743,6 +2815,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#BresaolaDellaValtellinaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BresaolaDellaValtellinaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#BureauVeritasItaliaSpa -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BureauVeritasItaliaSpa">
@@ -2786,6 +2866,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BurrataDiAndriaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#BurrataDiAndriaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#BurrataDiAndriaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -3064,6 +3152,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CantucciToscaniZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CantucciToscaniZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CapecchiSpA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CapecchiSpA">
@@ -3076,6 +3172,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via Tenuta del Cavaliere, 1</haIndirizzo>
         <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capecchi S.p.A.</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0660505000</haNumeroDiTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CapocolloDiCalabriaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CapocolloDiCalabriaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -3109,6 +3213,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CappellacciDiZuccaFerraresiZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CappellacciDiZuccaFerraresiZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestum -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestum">
@@ -3131,6 +3243,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestumDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestumZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CarciofoDiPaestumZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -3412,6 +3532,14 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CilentoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CilentoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CintaSenese -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CintaSenese">
@@ -3440,6 +3568,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CintaSeneseZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CintaSeneseZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModica -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModica">
@@ -3464,6 +3600,14 @@ carne fresca</consistenza>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModicaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModicaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CioccolatoDiModicaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -3532,6 +3676,14 @@ carne fresca</consistenza>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CollineSalernitaneDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CollineSalernitaneZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CollineSalernitaneZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -4362,6 +4514,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CoppiaFerrareseZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CoppiaFerrareseZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CorsiniBakeryDolciEBiscottiSrl -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CorsiniBakeryDolciEBiscottiSrl">
@@ -4502,6 +4662,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CostaDAmalfiZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CostaDAmalfiZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CostieragrumiDelRisoSrl -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CostieragrumiDelRisoSrl">
@@ -4545,6 +4713,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CozzaDiScardovariZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CozzaDiScardovariZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastra -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastra">
@@ -4569,6 +4745,14 @@ carne fresca</consistenza>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastraDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastraZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#CulurgionisOgliastraZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -5043,6 +5227,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#FianoDiAvellinoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FianoDiAvellinoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#FianoLoveFest -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FianoLoveFest">
@@ -5106,6 +5298,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FicoBiancoDelCilentoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#FilabFilieraLatteBufalino -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FilabFilieraLatteBufalino">
@@ -5150,6 +5350,14 @@ carne fresca</consistenza>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FocacciaDiReccoColFormaggioDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#FocacciaDiReccoColFormaggioZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#FocacciaDiReccoColFormaggioZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -5302,6 +5510,14 @@ carne fresca</consistenza>
         <sapore>sapido, fine e armonico, del tipo &quot;extrabrut&quot; o del tipo &quot;brut&quot;</sapore>
         <sostanzeNonVolatili>15,0 g/l</sostanzeNonVolatili>
         <titoloAlcolometrico>12,00% vol</titoloAlcolometrico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#GrecoDiTufoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#GrecoDiTufoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -5550,6 +5766,14 @@ carne fresca</consistenza>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#IrpiniaCollineUfitaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#IrpiniaCollineUfitaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#IrpiniaCollineUfitaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -5803,6 +6027,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#LimoneCostaAmalfiZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#LimoneCostaAmalfiZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofilone -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofilone">
@@ -5822,6 +6054,14 @@ carne fresca</consistenza>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofiloneDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofiloneZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MaccheronciniDiCampofiloneZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -5928,6 +6168,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDellaLunigianaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDellaLunigianaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDelleDolomitiBellunesi -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDelleDolomitiBellunesi">
@@ -5955,6 +6203,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDelleDolomitiBellunesiZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleDelleDolomitiBellunesiZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresino -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresino">
@@ -5978,6 +6234,14 @@ carne fresca</consistenza>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresinoDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresinoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MieleVaresinoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -6076,6 +6340,14 @@ carne fresca</consistenza>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#MozzarellaDiBufalaCampanaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MozzarellaDiBufalaCampanaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoni -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoni">
@@ -6099,6 +6371,14 @@ carne fresca</consistenza>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoniDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoniZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#NocciolaDiGiffoniZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -6217,6 +6497,14 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioDiPugliaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioDiPugliaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#OlioDiPugliaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -6342,6 +6630,14 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PampapatoDiFerraraZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PampapatoDiFerraraZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PaneDiAltamura -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PaneDiAltamura">
@@ -6373,6 +6669,14 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PaneDiAltamuraZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PaneDiAltamuraZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PaneDiMatera -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PaneDiMatera">
@@ -6399,6 +6703,14 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PaneDiMateraDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PaneDiMateraZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PaneDiMateraZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -6449,6 +6761,14 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
         <peso>peso variabile a seconda delle dimensioni, compreso tra 33 gr e 6 Kg</peso>
         <sapore>: dolce, con retrogusto di frutta candita e mandorle ed un sentore di spezie, molto intenso</sapore>
         <umidita>:15% sul prodotto finito;</umidita>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PanforteDiSienaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PanforteDiSienaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -6567,6 +6887,14 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ParmigianoReggianoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ParmigianoReggianoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnano -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnano">
@@ -6591,6 +6919,14 @@ tagli, di muffe, larve o parassiti e di corpi estranei</aspettoEsterno>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnanoDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnanoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnanoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -6727,6 +7063,14 @@ tagli, di muffe, larve o parassiti e di corpi estranei</aspettoEsterno>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentinaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PenisolaSorrentinaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PiadinaRomagnola -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PiadinaRomagnola">
@@ -6756,6 +7100,14 @@ tagli, di muffe, larve o parassiti e di corpi estranei</aspettoEsterno>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PiadinaRomagnolaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PiadinaRomagnolaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#Pitina -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pitina">
@@ -6781,6 +7133,14 @@ tagli, di muffe, larve o parassiti e di corpi estranei</aspettoEsterno>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PitinaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PitinaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellina -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellina">
@@ -6801,6 +7161,14 @@ tagli, di muffe, larve o parassiti e di corpi estranei</aspettoEsterno>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellinaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellinaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PizzoccheriDellaValtellinaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -6853,6 +7221,14 @@ tagli, di muffe, larve o parassiti e di corpi estranei</aspettoEsterno>
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PomodorinoDelPiennoloDelVesuvioZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PorchettaDiAriccia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PorchettaDiAriccia">
@@ -6874,6 +7250,22 @@ tagli, di muffe, larve o parassiti e di corpi estranei</aspettoEsterno>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PorchettaDiAricciaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#PorchettaDiAricciaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PorchettaDiAricciaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ProsciuttoDiParmaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProsciuttoDiParmaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -6907,6 +7299,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#ProvoloneDelMonacoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProvoloneDelMonacoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#RicciarelliDiSiena -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#RicciarelliDiSiena">
@@ -6936,6 +7336,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#RicciarelliDiSienaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#RicciarelliDiSienaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampana -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampana">
@@ -6961,6 +7369,22 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampanaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampanaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaDiBufalaCampanaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaRomanaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#RicottaRomanaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -7284,6 +7708,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SaleMarinoDiTrapaniZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SaleMarinoDiTrapaniZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentino -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentino">
@@ -7304,6 +7736,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentinoDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentinoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SalmerinoDelTrentinoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -7516,6 +7956,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#SquacqueroneDiRomagnaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#SquacqueroneDiRomagnaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiDisciplinare -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiDisciplinare">
@@ -7562,6 +8010,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TaurasiZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirino -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirino">
@@ -7583,6 +8039,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirinoDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirinoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirinoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -7636,6 +8100,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
     
 
 
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TorroneDiBagnaraZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TorroneDiBagnaraZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentino -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentino">
@@ -7657,6 +8129,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentinoDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentinoZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#TroteDelTrentinoZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
@@ -7717,6 +8197,14 @@ bovini di razze diverse (Frisona, Brunalpina, Pezzata Rossa, Jersey, Podolica e 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#VitelloniPiemontesiDellaCosciaDisciplinare">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Disciplinare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#VitelloniPiemontesiDellaCosciaZDP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#VitelloniPiemontesiDellaCosciaZDP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#ZonaDiProduzione"/>
     </owl:NamedIndividual>
     
 
