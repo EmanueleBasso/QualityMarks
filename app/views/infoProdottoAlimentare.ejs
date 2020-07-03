@@ -52,6 +52,7 @@
             }
         </style>
         <link href="../styles/template/style.css" rel="stylesheet" />
+        <link href="../styles/template/leaflet.css" rel="stylesheet" />
         <link href="../images/logo.png" rel="shortcut icon" />
     </head>
     <body class="app">
@@ -110,7 +111,7 @@
                         <div class="row gap-20 masonry pos-r">
                             <div class="masonry-sizer col-3"></div>
                             <div class="masonry-item w-100"></div>
-                            <div class="masonry-item col-6">
+                            <div class="masonry-item col-9">
                                 <div class="bgc-white p-20 bd">
                                     <h1 class="c-grey-900" style="float:left;"><%= payload.nomeProdotto %>&nbsp;</h1><h1>(<%= payload.nomeMarchio %>)</h1>
                                     <hr/>
@@ -135,15 +136,24 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--
                             <div class="masonry-item col-3">
                                 <div class="bgc-white p-20 bd">
                                     LOGO PRODOTTO
                                     <img src="../images/logo.png" style="width:100%;"> 
                                 </div>
                             </div>
+                            -->
                             <div class="masonry-item col-3">
                                 <div class="bgc-white p-20 bd">
                                     <img src="../assets/loghi_marchi/<%= payload.nomeMarchio %>Logo.png" style="width:100%;">
+                                </div>
+                            </div>
+                            <div class="masonry-item col-6">
+                                <input id="nomeFileZonaDiProduzione" type="hidden" name="nomeFileZonaDiProduzione" value="<%= payload.nomeFileZonaDiProduzione %>" />
+                                <div class="bgc-white p-20 bd c-grey-900" style="font-size: 1.2em;">
+                                    <h5 style="padding-bottom: 5px;">Zona di Produzione</h5>
+                                    <div id="map" style="padding-bottom: 75%;"></div>
                                 </div>
                             </div>
                             <div class="masonry-item col-6">
@@ -166,11 +176,6 @@
                                     <% }else{ %>
                                         <span>Informazione non disponibile</span>
                                     <% } %>
-                                </div>
-                            </div>
-                            <div class="masonry-item col-6">
-                                <div class="bgc-white p-20 bd">
-                                    MAPPA ZONA DI PRODUZIONE
                                 </div>
                             </div>
                             <div class="masonry-item col-6">
@@ -292,6 +297,7 @@
         <script type="text/javascript" src="../scripts/template/vendor.js"></script>
         <script type="text/javascript" src="../scripts/template/bundle.js"></script>
         <script type="text/javascript" src="../scripts/template/jquery.js"></script>
-        <script type="text/javascript" src="../scripts/ricercaProdottoAlimentare.js"></script>
+        <script type="text/javascript" src="../scripts/template/leaflet.js"></script>
+        <script type="text/javascript" src="../scripts/infoProdottoAlimentare.js"></script>    
     </body>
 </html>
