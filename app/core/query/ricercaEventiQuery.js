@@ -2,7 +2,7 @@ const logger = require('loglevel')
 const connection = require('./connection')
 
 module.exports = async function (request, response){
-    var citta = request.body.query
+    var citta = request.body.citta
     var nazione = request.body.nazione
     var regione = request.body.regione
     var provincia = request.body.provincia
