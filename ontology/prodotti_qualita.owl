@@ -69,14 +69,7 @@
     <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#haLogo -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#haLogo">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#ProdottoAlimentare"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#MarchioDiQualita"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Logo"/>
     </owl:ObjectProperty>
     
