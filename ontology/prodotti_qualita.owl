@@ -1159,6 +1159,13 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#haSitoWeb"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SitoWeb"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -6992,10 +6999,10 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PanificioCafissiSrl">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Azienda"/>
         <citta rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/100002-(1992-04-16)"/>
-        <citta rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/100"/>
         <haSitoWeb rdf:resource="https://www.panificiocafissi.it"/>
         <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
         <produce rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#CantucciToscani"/>
+        <provincia rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/100"/>
         <haCAP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59011</haCAP>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info@panificiocafissi.it</haEmail>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via Don Lorenzo Milani, 33</haIndirizzo>
