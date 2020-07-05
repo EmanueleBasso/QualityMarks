@@ -25,7 +25,7 @@ module.exports = async function (request, response){
                 ?class rdfs:label ?tipologia.
 
                 ?individual prodotti-qualita:nomeProdotto ?nomeProdotto.
-                opt FILTER(regex(?nomeProdotto, "nome", "i"))'
+                opt FILTER(regex(?nomeProdotto, "nome", "i"))
 
                 ?individual prodotti-qualita:possiede ?marchio.
                 ?marchio prodotti-qualita:nomeMarchio ?nomeMarchio.

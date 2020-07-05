@@ -278,18 +278,17 @@ function query(){
 
     var request = {}
 
+    request['nomeSocieta'] = $('#inputNomeSocieta').val()
     request['citta'] = $('#inputCitta').val()
     request['nazione'] = $('#inputNazione').val()
     request['regione'] = $('#inputRegione').val()
     request['provincia'] = $('#inputProvincia').val()
-    request['mese'] = $('#inputMese').val()
-    request['categoria'] = $('#inputCategoria').val()
     request['ordinamento'] = $('#inputOrdine').val()
     request['ordinamentoModo'] = $('#inputOrdineModo').val()
 
     $.ajax({
         method: 'POST',
-        url: '/QualityMarks/ricercaEventiQuery',
+        url: '/QualityMarks/ricercaSocietaVigilanteQuery',
         data: request,
         dataType: 'json'
     }).done(function(data){
@@ -307,32 +306,21 @@ function query(){
                                         <div>`
 
             data.forEach(element => {
-                var node = `<div class="email-list-item peers fxw-nw p-20 bdB bgcH-grey-100">
+                var node = `<form method="POST" action="/QualityMarks/infoSocietaVigilante">
+                                <input type="hidden" name="iriSocieta" value="` + element.individual.value + `" />
+                                <input type="hidden" name="nomeCitta" value="` + element.nomeCitta.value + `" />
+                                <input type="hidden" name="nomeProvincia" value="` + element.nomeProvincia.value + `" />
+                                <input type="hidden" name="nomeRegione" value="` + element.nomeRegione.value + `" />
+                                <input type="hidden" name="nomeNazione" value="` + element.nomeNazione.value + `" />
+                                <div class="email-list-item peers fxw-nw p-20 bdB bgcH-grey-100 cur-p" onclick="this.parentNode.submit()">
                                     <div class="peer peer-greed ov-h">
-                                        <h5 class="fsz-def c-grey-900">` + element.titolo.value + `</h5>
-                                        <span>Tipologia: ` + element.tipologia.value + `</span>
+                                        <h5 class="fsz-def c-grey-900">` + element.nomeSocieta.value + `</h5>
+                                        <span>` + element.indirizzo.value + ` - ` + element.cap.value + ` ` + element.nomeCitta.value + ` (` + element.nomeProvincia.value + `), ` + element.nomeRegione.value + `, ` + element.nomeNazione.value + `</span>
                                         <br/>
-                                        <span>Periodo: ` + element.mese.value + `</span>
-                                        <br/>
-                                        <span>`
-                
-                if(element.indirizzo.value !== ""){
-                    node += element.indirizzo.value + ` - `
-                }
-                
-                node += element.nomeCitta.value + ` (` + element.nomeProvincia.value + `), ` + element.nomeRegione.value + `, ` + element.nomeNazione.value + `</span>
-                                        <br/>
-                                        <span>Organizzatore: ` + element.organizzatore.value + `</span>
-                                        <br/>
-                                        <span>Sito Web: `
-
-                if(element.sitoWeb.value !== "-"){
-                    node += `<a href="` + element.sitoWeb.value + `" target="_blank">` + element.sitoWeb.value + `</a></span>`
-                }else{
-                    node += '-</span>'
-                }
-
-                node += `</div></div>`
+                                        <span>Sito Web: <a href="` + element.sitoWeb.value + `" target="_blank" onclick="event.stopPropagation();">` + element.sitoWeb.value + `</a></span>
+                                    </div>
+                                </div>
+                            </form>`
 
                 attach += node
             })

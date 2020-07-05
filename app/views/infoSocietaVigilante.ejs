@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+        <title>Quality Marks</title>
+        <style>
+            #loader {
+                transition: all 0.3s ease-in-out;
+                opacity: 1;
+                visibility: visible;
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                background: #fff;
+                z-index: 90000;
+            }
+            #loader.fadeOut {
+                opacity: 0;
+                visibility: hidden;
+            }
+            .spinner {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: calc(50% - 20px);
+                left: calc(50% - 20px);
+                background-color: #333;
+                border-radius: 100%;
+                -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+                animation: sk-scaleout 1s infinite ease-in-out;
+            }
+            @-webkit-keyframes sk-scaleout {
+                0% {
+                    -webkit-transform: scale(0);
+                }
+                100% {
+                    -webkit-transform: scale(1);
+                    opacity: 0;
+                }
+            }
+            @keyframes sk-scaleout {
+                0% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                }
+                100% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    opacity: 0;
+                }
+            }
+        </style>
+        <link href="../styles/template/style.css" rel="stylesheet" />
+        <link href="../styles/template/leaflet.css" rel="stylesheet" />
+        <link href="../images/logo.png" rel="shortcut icon" />
+    </head>
+    <body class="app">
+        <div id="loader"><div class="spinner"></div></div>
+        <script>
+            window.addEventListener("load", function load() {
+                const loader = document.getElementById("loader");
+                setTimeout(function () {
+                    loader.classList.add("fadeOut");
+                }, 300);
+            });
+        </script>
+        <div>
+            <div class="sidebar">
+                <div class="sidebar-inner">
+                    <div class="sidebar-logo">
+                        <div class="peers ai-c fxw-nw">
+                            <div class="peer peer-greed">
+                                <a class="sidebar-link td-n" href="/QualityMarks/ricercaProdottoAlimentare">
+                                    <div class="peers ai-c fxw-nw">
+                                        <div class="peer" style="margin: 30px auto 30px auto;">
+                                            <div class="logo"><img src="../images/logo.png" width="100%"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="peer">
+                                <div class="mobile-toggle sidebar-toggle">
+                                    <a href="" class="td-n"><i class="ti-arrow-circle-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="sidebar-menu scrollable pos-r">
+                        <li class="nav-item">
+                            <a class="sidebar-link" href="/QualityMarks/ricercaProdottoAlimentare">
+                                <span class="icon-holder"><i class="c-blue-500 ti-search"></i> </span><span class="title">Ricerca Prodotto Alimentare</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="sidebar-link" href="/QualityMarks/ricercaPerMarchio">
+                                <span class="icon-holder"><i class="c-pink-500 ti-medall"></i> </span><span class="title">Ricerca per Marchio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="sidebar-link" href="/QualityMarks/ricercaSocietaVigilante">
+                                <span class="icon-holder"><i class="c-purple-500 ti-eye"></i> </span><span class="title">Ricerca Società Vigilante</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="sidebar-link" href="/QualityMarks/ricercaEventi">
+                                <span class="icon-holder"><i class="c-orange-500 ti-map-alt"></i> </span><span class="title">Ricerca Eventi</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-container">
+                <main class="main-content bgc-grey-100" style="padding-top: 0px;">
+                    <div id="mainContent">
+                        <div class="row gap-20 masonry pos-r">
+                            <div class="masonry-sizer col-3"></div>
+                            <div class="masonry-item w-100"></div>
+                            <div class="masonry-item col-12">
+                                <div class="bgc-white p-20 bd">
+                                    <h1 class="c-grey-900"><%= payload.nome %></h1>
+                                    <hr/>
+                                    <h5 class="c-grey-900" style="font-weight: normal;"><%= payload.indirizzo %> - <%= payload.cap %> <%= payload.nomeCitta %> (<%= payload.nomeProvincia %>), <%= payload.nomeRegione %>, <%= payload.nomeNazione %></h5>
+                                    <h5 class="c-grey-900" style="font-weight: normal;">Telefono: <%= payload.numeroTelefono %></h5>
+                                    <h5 class="c-grey-900" style="font-weight: normal;">Fax: <%= payload.fax %></h5>
+                                    <h5 class="c-grey-900" style="font-weight: normal;">Sito Web: <a href="<%= payload.sitoWeb %>" target="_blank"><%= payload.sitoWeb %></a></h5>
+                                    <h5 class="c-grey-900" style="font-weight: normal;">Email: <%= payload.email %></h5>
+                                    <h5 class="c-grey-900" style="font-weight: normal;">Partita IVA: <%= payload.partitaIva %></h5>
+                                </div>
+                            </div>
+                            <div class="masonry-item col-12">
+                                <div class="bgc-white p-20 bd">
+                                    <h4 class="c-grey-900">Prodotti controllati:</h4>
+                                    <div class="mT-30" style="margin-top: 0px !important;">
+                                        <div class="layer w-100 fxg-1 scrollable pos-r">
+                                            <div style="font-size: 1.1em;">
+                                                <% 
+                                                    payload.prodottiControllati.forEach(element => {
+                                                %>
+                                                <form method="POST" action="/QualityMarks/infoProdottoAlimentare">
+                                                    <input type="hidden" name="iriProdotto" value="<%= element.individual %>" />
+                                                    <input type="hidden" name="nomeMarchio" value="<%= element.nomeMarchio %>" />
+                                                    <input type="hidden" name="nomeNazione" value="<%= element.nomeNazione %>" />
+                                                    <input type="hidden" name="nomeRegione" value="<%= element.nomeRegione %>" />
+                                                    <input type="hidden" name="tipologia" value="<%= element.tipologia %>" />
+                                                    <div class="email-list-item peers fxw-nw p-20 bdB bgcH-grey-100 cur-p" onclick="this.parentNode.submit()">
+                                                        <div class="peer peer-greed ov-h">
+                                                            <h5 class="fsz-def c-grey-900" style="float:left;"><%= element.nomeProdotto %>&nbsp;</h5><h5 class="fsz-def">(<%= element.nomeMarchio %>)</h5>
+                                                            <div class="peers ai-c">
+                                                                <div class="peer peer-greed"><h6><%= element.tipologia %></h6></div>
+                                                            </div>
+                                                            <span class="whs-nw w-100 ov-h tov-e d-b">Nazione: <%= element.nomeNazione %>&emsp;&emsp;&emsp;Regione: <%= element.nomeRegione %></span>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <%
+                                                    })
+                                                    if(payload.prodottiControllati.length == 0){
+                                                %>
+                                                    <span>Nessun prodotto controllato</span>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </main>
+                <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+                    <span>Copyright © 2019 Template designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a>. All rights reserved.</span>
+                </footer>
+            </div>
+        </div>
+        <script type="text/javascript" src="../scripts/template/vendor.js"></script>
+        <script type="text/javascript" src="../scripts/template/bundle.js"></script>
+        <script type="text/javascript" src="../scripts/template/jquery.js"></script>
+    </body>
+</html>

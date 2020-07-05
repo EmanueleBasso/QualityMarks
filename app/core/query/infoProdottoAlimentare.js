@@ -27,7 +27,6 @@ module.exports = async function (request, response){
             payload['nomeRegione'] = nomeRegione
             payload['tipologia'] = tipologia
 
-            // Pure gli altri file
             payload['nomeFileDisciplinare'] = res[iriProdotto][ontologyIri + 'haDisciplinare'][0]['value'].split('#')[1] + '.pdf'
             payload['nomeFileZonaDiProduzione'] = res[iriProdotto][ontologyIri + 'haZonaDiProduzione'][0]['value'].split('#')[1] + '.geojson'
 

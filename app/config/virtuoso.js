@@ -4,6 +4,7 @@ module.exports = {
     "defaultGraph": "prodotti-qualita",
     "prefixes": {
         "prodotti-qualita": "http://www.semanticweb.org/progettoWS/prodotti-qualita#",
-        "l0": "https://w3id.org/italia/onto/l0/"
+        "l0": "https://w3id.org/italia/onto/l0/",
+        "CLV": "https://w3id.org/italia/onto/CLV/"
     }
 }

@@ -9,3 +9,7 @@ exports.functionRicercaPerMarchio = async function (request, response){
 exports.functionRicercaEventi = async function (request, response){
     response.render('ricercaEventi')
 }
+
+exports.functionRicercaSocietaVigilante = async function (request, response){
+    response.render('ricercaSocietaVigilante')
+}

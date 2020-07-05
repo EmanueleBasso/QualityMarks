@@ -6,6 +6,8 @@ const ricercaProdottoAlimentareQuery = require('./core/query/ricercaProdottoAlim
 const infoProdottoAlimentare = require('./core/query/infoProdottoAlimentare')
 const ricercaPerMarchioQuery = require('./core/query/ricercaPerMarchioQuery')
 const ricercaEventiQuery = require('./core/query/ricercaEventiQuery')
+const ricercaSocietaVigilanteQuery = require('./core/query/ricercaSocietaVigilanteQuery')
+const infoSocietaVigilante = require('./core/query/infoSocietaVigilante')
 
 const app = express()
 
@@ -25,7 +27,8 @@ app.get(config.basepath + '/' + 'ricercaPerMarchio', basicRoutes.functionRicerca
 app.post(config.basepath + '/' + 'ricercaPerMarchioQuery', ricercaPerMarchioQuery)
 app.get(config.basepath + '/' + 'ricercaEventi', basicRoutes.functionRicercaEventi)
 app.post(config.basepath + '/' + 'ricercaEventiQuery', ricercaEventiQuery)
-
-//app.get(config.basepath + '/' + 'about', basicRoutes.functionAboutPage)
+app.get(config.basepath + '/' + 'ricercaSocietaVigilante', basicRoutes.functionRicercaSocietaVigilante)
+app.post(config.basepath + '/' + 'ricercaSocietaVigilanteQuery', ricercaSocietaVigilanteQuery)
+app.post(config.basepath + '/' + 'infoSocietaVigilante', infoSocietaVigilante)
 
 app.listen(config.port, config.host, () => logger.info('[System] App QualityMarks deployed at: http://' + config.host + ':' + config.port + config.basepath))

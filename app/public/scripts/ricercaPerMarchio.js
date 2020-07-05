@@ -1,14 +1,3 @@
-// Generale
-$('#form').on('keyup keypress', function(e) {
-    var keyCode = e.keyCode || e.which
-
-    if(keyCode === 13){
-        e.preventDefault()
-        query()
-        return false
-    }
-})
-
 function query(){
     $('#loader').removeClass('fadeOut')
 
@@ -49,7 +38,7 @@ function query(){
                                 <input type="hidden" name="tipologia" value="` + element.tipologia.value + `" />
                                 <div class="email-list-item peers fxw-nw p-20 bdB bgcH-grey-100 cur-p" onclick="this.parentNode.submit()">
                                     <div class="peer peer-greed ov-h">
-                                        <h5 class="fsz-def tt-c c-grey-900" style="float:left;">` + element.nomeProdotto.value + `&nbsp;</h5><h5 class="fsz-def tt-c">(` + element.nomeMarchio.value + `)</h5>
+                                        <h5 class="fsz-def c-grey-900" style="float:left;">` + element.nomeProdotto.value + `&nbsp;</h5><h5 class="fsz-def">(` + element.nomeMarchio.value + `)</h5>
                                         <div class="peers ai-c">
                                             <div class="peer peer-greed"><h6>` + element.tipologia.value + `</h6></div>
                                         </div>
