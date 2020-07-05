@@ -150,7 +150,7 @@ module.exports = async function (request, response){
                 }
             })
 
-            logger.info(res.results.bindings)
+            //logger.info(res.results.bindings)
             response.send(res.results.bindings)
         })
         .catch((err) => {

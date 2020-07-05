@@ -1,4 +1,3 @@
-// Generale
 $('#form').on('keyup keypress', function(e) {
     var keyCode = e.keyCode || e.which
 

@@ -17,7 +17,8 @@ module.exports = async function (request, response){
 
     connection.query(query, true)
         .then((res) => {
-            logger.info(JSON.stringify(res, null, 4))
+            //logger.info(JSON.stringify(res, null, 4))
+
             var ontologyIri = "http://www.semanticweb.org/progettoWS/prodotti-qualita#"
 
             var payload = {}
@@ -180,7 +181,7 @@ module.exports = async function (request, response){
                     })
                 }))
             }).then(() => {
-                logger.info(payload)
+                //logger.info(payload)
                 response.render('infoProdottoAlimentare', {payload})
             })
         })
