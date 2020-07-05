@@ -2410,7 +2410,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urp@agrisricerca.it</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">079 3899002</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loc. Bonassai S.S. 291 Sassari-Fertilia – Km. 18,600</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AGRIS SARDEGNA</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agris Sardegna</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">079 2831551</haNumeroDiTelefono>
     </owl:NamedIndividual>
     
@@ -2939,7 +2939,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info@bioagricert.org</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">051564294</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via dei Macabraccia, 8</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioagricert Srl</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioagricert S.r.l.</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">051562158</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01951701208</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3020,7 +3020,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">informazioni@bureauveritas.com</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02.2552980</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via Miramare, 15</haIndirizzo>
-        <haNome>Bureau Veritas Italia S.p.a</haNome>
+        <haNome>Bureau Veritas Italia S.p.A.</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02270911</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11498640157</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3096,7 +3096,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ccpb@ccpb.it</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+039 051 254842</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viale Masini, 36</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCPB srl</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCPB S.r.l.</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+039 051 6089811</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02469721209</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3148,7 +3148,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csqa@csqa.it</haEmail>
         <haFax>+39 0445313070</haFax>
         <haIndirizzo>Via San Gaetano, 74</haIndirizzo>
-        <haNome>CSQA Certificazioni Srl</haNome>
+        <haNome>CSQA Certificazioni S.r.l.</haNome>
         <haNumeroDiTelefono>+39 0445.313011</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02603680246</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3190,7 +3190,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cciaa.arezzosiena@as.legalmail.camcom.it</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0577 270981</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piazza Matteotti, 30</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camera di Commercio Industria Artigianato Agricoltura di Siena</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camera di Commercio Industria, Artigianato e Agricoltura di Siena</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0577 202511</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02326130511</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3210,7 +3210,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcm.certificazioneprodotti@rm.camcom.it</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+39 06 52082493</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via Appia Nuova, 218</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camera di Commercio, Industria, Artigianato e Agricoltura di Roma – Area V – Certificazione di prodotti agroalimentari</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camera di Commercio Industria, Artigianato e Agricoltura di Roma - Area V - Certificazione di prodotti agroalimentari</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+39 0652082051</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01240741007</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3251,7 +3251,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unione.liguria@lig.camcom.it</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">010 2704225</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via Garibaldi, 4</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camere di Commercio, Industria, Artigianato e Agricoltura di Genova e delle Riviere di Liguria - Imperia La Spezia Savona</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camere di Commercio Industria, Artigianato e Agricoltura di Genova e delle Riviere di Liguria - Imperia La Spezia Savona</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">010 2704256</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00796640100</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3651,7 +3651,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info@kiwacermet.it</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+39 051763382</haFax>
         <haIndirizzo>Via Cadriano, 23</haIndirizzo>
-        <haNome>Cermet - Certificazione e controllo della qualità - Soc. cons. a.r.l.</haNome>
+        <haNome>Cermet - Certificazione e controllo della qualità - Società consortile a.r.l.</haNome>
         <haNumeroDiTelefono>+39 0514593111</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00627711203</haPartitaIVA>
     </owl:NamedIndividual>
@@ -5069,7 +5069,7 @@ carne fresca</consistenza>
         <haCAP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00161</haCAP>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info@dqacertificazioni.it</haEmail>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via Tomassetti, 9</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DQA – Dipartimento Qualità Agroalimentare s.r.l.</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DQA - Dipartimento Qualità Agroalimentare S.r.l.</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+39 0685451246</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10928561009</haPartitaIVA>
     </owl:NamedIndividual>
@@ -5758,7 +5758,7 @@ carne fresca</consistenza>
         <haCAP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40122</haCAP>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info@icea.bio</haEmail>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via G. Brugnoli, 15</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICEA – Ist. Certif. Etica e Ambientale</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICEA – Istituto Certificazione Etica e Ambientale</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+39 051 272986</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02107241206</haPartitaIVA>
     </owl:NamedIndividual>
@@ -5778,7 +5778,7 @@ carne fresca</consistenza>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info@ifcq.it</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0432-943357</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via Rodeano, 71</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IFCQ CERTIFICAZIONI</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IFCQ Certificazioni</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0432-940349</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02910180302</haPartitaIVA>
     </owl:NamedIndividual>
@@ -6184,9 +6184,9 @@ carne fresca</consistenza>
         <provincia rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/063"/>
         <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
         <haIndirizzo>Piazzale Dei Platani</haIndirizzo>
-        <haTitolo>La Sagra Pomodorini Del Piennolo A Cercola</haTitolo>
-        <haTitolo>Proloco di Cercola</haTitolo>
+        <haTitolo>La Sagra Pomodorini del Piennolo a Cercola</haTitolo>
         <nelMese>Luglio</nelMese>
+        <organizzatore>Proloco di Cercola</organizzatore>
     </owl:NamedIndividual>
     
 
@@ -6738,7 +6738,7 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ocqpr@ocqpr.it</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0522 564500</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via Ferruccio Ferrari, 6</haIndirizzo>
-        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCQ – Organismo Controllo Qualità Produzioni Regolamentate Soc. Coop.</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCQ - Organismo Controllo Qualità Produzioni Regolamentate Società cooperativa</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+39 0522934266</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01789670351</haPartitaIVA>
     </owl:NamedIndividual>
