@@ -2456,7 +2456,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agroqualita@agroqualita.it</haEmail>
         <haFax>+39 06 54228692</haFax>
         <haIndirizzo>Viale Cesare Pavese, 305</haIndirizzo>
-        <haNome>Agroqualità S.p.A.</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agroqualità S.p.A.</haNome>
         <haNumeroDiTelefono>+39 06 54228675</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05053521000</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3020,7 +3020,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">informazioni@bureauveritas.com</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02.2552980</haFax>
         <haIndirizzo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Via Miramare, 15</haIndirizzo>
-        <haNome>Bureau Veritas Italia S.p.A.</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bureau Veritas Italia S.p.A.</haNome>
         <haNumeroDiTelefono rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02270911</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11498640157</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3148,7 +3148,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">csqa@csqa.it</haEmail>
         <haFax>+39 0445313070</haFax>
         <haIndirizzo>Via San Gaetano, 74</haIndirizzo>
-        <haNome>CSQA Certificazioni S.r.l.</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSQA Certificazioni S.r.l.</haNome>
         <haNumeroDiTelefono>+39 0445.313011</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02603680246</haPartitaIVA>
     </owl:NamedIndividual>
@@ -3651,7 +3651,7 @@ in buona sintonia con i caratteri olfattivi che gli sono propri</sapore>
         <haEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">info@kiwacermet.it</haEmail>
         <haFax rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+39 051763382</haFax>
         <haIndirizzo>Via Cadriano, 23</haIndirizzo>
-        <haNome>Cermet - Certificazione e controllo della qualità - Società consortile a.r.l.</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cermet - Certificazione e controllo della qualità - Società consortile a.r.l.</haNome>
         <haNumeroDiTelefono>+39 0514593111</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00627711203</haPartitaIVA>
     </owl:NamedIndividual>
@@ -5837,7 +5837,7 @@ carne fresca</consistenza>
         <haEmail>info@ismecert.com</haEmail>
         <haFax>081-5534019</haFax>
         <haIndirizzo>Corso Meridionale, 6</haIndirizzo>
-        <haNome>Istituto Mediterraneo di Certificazione Agroalimentare (IS.ME.CERT.)</haNome>
+        <haNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Istituto Mediterraneo di Certificazione Agroalimentare (IS.ME.CERT.)</haNome>
         <haNumeroDiTelefono>081-5636647</haNumeroDiTelefono>
         <haPartitaIVA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05053521000</haPartitaIVA>
     </owl:NamedIndividual>
@@ -7379,6 +7379,7 @@ tagli, di muffe, larve o parassiti e di corpi estranei</aspettoEsterno>
         <colore>marrone piu&apos; o meno scuro con presenza di parti tegumentali di colore nocciola/grigio, tipico del grano saraceno</colore>
         <consistenza>dopo la lavorazione, hanno consistenza semidura; mentre si presentano secchi e duri, se essiccati</consistenza>
         <materiaPrima>impasto di grano saraceno, Fagopyrum esculentum, e sfarinati di altri cereali</materiaPrima>
+        <nomeProdotto>Pizzoccheri della Valtellina</nomeProdotto>
         <sapore>delicato e tipico dei prodotti ottenuti con grano saraceno ed altri sfarinati</sapore>
     </owl:NamedIndividual>
     
