@@ -6006,9 +6006,9 @@ carne fresca</consistenza>
     
 
 
-    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#IstitutoNordOvestQualità -->
+    <!-- http://www.semanticweb.org/progettoWS/prodotti-qualita#IstitutoNordOvestQualita -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#IstitutoNordOvestQualità">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#IstitutoNordOvestQualita">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#SocietaVigilante"/>
         <citta rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/004143-(1861-03-17)"/>
         <controlla rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#TincaGobbaDorataDelPianaltoDiPoirino"/>
