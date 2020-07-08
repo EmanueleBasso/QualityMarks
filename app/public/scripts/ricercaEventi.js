@@ -31,52 +31,65 @@ function query(){
         var attach
 
         if(data.length == 0){
+            $('#res').empty()
             attach = `<div class="bgc-white p-20 bd">
                             <h5 style="text-align: center;" class="c-grey-900">Nessun risultato</h5>
                         </div>`
+            $('#res').append(attach)
         }else{
-            attach = `<div class="bgc-white p-20 bd">
-                            <h5 class="c-grey-900">Risultati:</h5>
-                                <div class="mT-30" style="margin-top: 0px !important;">
-                                    <div class="layer w-100 fxg-1 scrollable pos-r">
-                                        <div>`
+            console.log('we')
+            $('#res').empty()
+            attach = `<div id="map" style="padding-bottom: 75%;"></div>`
+            $('#res').append(attach)
 
+            var map = L.map('map')
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map)
+
+
+
+            // var styleJsonLayer = {
+            //     "weight": 3,
+            //     "opacity": 0.7,
+            //     "fillOpacity": 0.4
+            // }
+
+            // var jsonLayer = L.geoJSON(data, {style: styleJsonLayer}).addTo(map)
+
+            // map.fitBounds(jsonLayer.getBounds())
+            var latLonMarkers = []
             data.forEach(element => {
-                var node = `<div class="email-list-item peers fxw-nw p-20 bdB bgcH-grey-100">
-                                    <div class="peer peer-greed ov-h">
-                                        <h5 class="fsz-def c-grey-900">` + element.titolo.value + `</h5>
-                                        <span>Tipologia: ` + element.tipologia.value + `</span>
-                                        <br/>
-                                        <span>Periodo: ` + element.mese.value + `</span>
-                                        <br/>
-                                        <span>`
-                
-                if(element.indirizzo.value !== ""){
-                    node += element.indirizzo.value + ` - `
+                if (element.lat !== undefined)
+                {
+                    var popupText = ''
+                    popupText += '<b>' + element.titolo.value + '</b><br/>Tipologia: ' +  element.tipologia.value + '<br/>Periodo: ' + element.mese.value + '<br/>'
+                    if(element.indirizzo.value !== "")
+                    {
+                        popupText += element.indirizzo.value + ' - '
+                    }
+                    popupText += element.nomeCitta.value + ' (' + element.nomeProvincia.value + '), ' + element.nomeRegione.value + ', ' + element.nomeNazione.value
+                    popupText += '<br/>Organizzatore: ' + element.organizzatore.value + '<br/>Sito Web: '
+                    if(element.sitoWeb.value !== "-")
+                    {
+                        popupText += '<a href="' + element.sitoWeb.value + '" target="_blank">' + element.sitoWeb.value + '</a>'
+                    }
+                    else
+                    {
+                        popupText += '-'
+                    }
+                    latLonMarkers.push([element.lat, element.lon])
+                    var marker = new L.Marker([element.lat, element.lon])
+                    marker.bindPopup(popupText)
+                    marker.addTo(map)
                 }
-                
-                node += element.nomeCitta.value + ` (` + element.nomeProvincia.value + `), ` + element.nomeRegione.value + `, ` + element.nomeNazione.value + `</span>
-                                        <br/>
-                                        <span>Organizzatore: ` + element.organizzatore.value + `</span>
-                                        <br/>
-                                        <span>Sito Web: `
-
-                if(element.sitoWeb.value !== "-"){
-                    node += `<a href="` + element.sitoWeb.value + `" target="_blank">` + element.sitoWeb.value + `</a></span>`
-                }else{
-                    node += '-</span>'
-                }
-
-                node += `</div></div>`
-
-                attach += node
             })
 
-            attach += `</div></div></div></div>`
+            var bounds = new L.LatLngBounds(latLonMarkers);
+            map.fitBounds(bounds)
+            map.setZoom(map.getZoom() - 1)
         }
-
-        $('#res').empty()
-        $('#res').append(attach)
 
         $('#loader').addClass('fadeOut')
     })

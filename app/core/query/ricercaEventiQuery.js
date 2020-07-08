@@ -1,5 +1,37 @@
 const logger = require('loglevel')
 const connection = require('./connection')
+const Nominatim = require('nominatim-geocoder')
+const geocoder = new Nominatim({/* No options */}, {
+    format: 'json',
+    limit: 1,
+})
+
+function getCoordinates(event)
+{
+    var query = {
+        city: event.nomeCitta.value,
+        county: event.nomeProvincia.value,
+        country: event.nomeNazione.value
+    }
+    if (event.indirizzo.value !== "")
+    {
+        query.street = event.indirizzo.value
+    }
+    return geocoder.search(query)
+        .then((response) => {
+            if (response.length > 0)
+            {
+                return [response[0].lat, response[0].lon]
+            }
+            else
+            {
+                return []
+            }
+        }).catch((error) => {
+            logger.error(error)
+            return []
+        })       
+}
 
 module.exports = async function (request, response){
     var citta = request.body.citta
@@ -137,7 +169,7 @@ module.exports = async function (request, response){
              ORDER BY ` + ordinamentoModo + `(?` + ordinamento + `)`
 
     connection.query(query, true)
-        .then((res) => {
+        .then(async (res) => {
             res.results.bindings.forEach((element) => {
                 if(element['indirizzo'] === undefined){
                     element['indirizzo'] = {value: ""}
@@ -151,6 +183,19 @@ module.exports = async function (request, response){
             })
 
             //logger.info(res.results.bindings)
+            await Promise.all(res.results.bindings.map(async (element) => {
+                await getCoordinates(element).then((result) => {
+                    if(result.length != 0)
+                    {
+                       element.lat = result[0]
+                       element.lon = result[1]
+                    }
+                    else
+                    {
+                        console.log(element.titolo.value)
+                    }
+                })
+            }))
             response.send(res.results.bindings)
         })
         .catch((err) => {
