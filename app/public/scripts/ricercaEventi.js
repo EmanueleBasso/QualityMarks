@@ -19,8 +19,6 @@ function query(){
     request['provincia'] = $('#inputProvincia').val()
     request['mese'] = $('#inputMese').val()
     request['categoria'] = $('#inputCategoria').val()
-    request['ordinamento'] = $('#inputOrdine').val()
-    request['ordinamentoModo'] = $('#inputOrdineModo').val()
 
     $.ajax({
         method: 'POST',
@@ -37,7 +35,6 @@ function query(){
                         </div>`
             $('#res').append(attach)
         }else{
-            console.log('we')
             $('#res').empty()
             attach = `<div id="map" style="padding-bottom: 75%;"></div>`
             $('#res').append(attach)
@@ -48,22 +45,26 @@ function query(){
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map)
 
-
-
-            // var styleJsonLayer = {
-            //     "weight": 3,
-            //     "opacity": 0.7,
-            //     "fillOpacity": 0.4
-            // }
-
-            // var jsonLayer = L.geoJSON(data, {style: styleJsonLayer}).addTo(map)
-
-            // map.fitBounds(jsonLayer.getBounds())
             var latLonMarkers = []
+            var popupTextMarkers = []
+                
             data.forEach(element => {
                 if (element.lat !== undefined)
                 {
+                    var alreadyInserted = false
                     var popupText = ''
+                    var pos = -1
+
+                    for(var i=0; i < latLonMarkers.length; i++) {
+                        if((element.lat == latLonMarkers[i][0]) && (element.lon == latLonMarkers[i][1])) {
+                            alreadyInserted = true
+                            pos = i
+                            popupText = popupTextMarkers[i]
+                            popupText += '<hr/>'
+                            break
+                        }
+                    }
+
                     popupText += '<b>' + element.titolo.value + '</b><br/>Tipologia: ' +  element.tipologia.value + '<br/>Periodo: ' + element.mese.value + '<br/>'
                     if(element.indirizzo.value !== "")
                     {
@@ -79,12 +80,21 @@ function query(){
                     {
                         popupText += '-'
                     }
-                    latLonMarkers.push([element.lat, element.lon])
-                    var marker = new L.Marker([element.lat, element.lon])
-                    marker.bindPopup(popupText)
-                    marker.addTo(map)
+
+                    if(alreadyInserted) {
+                        popupTextMarkers[pos] = popupText
+                    } else {
+                        latLonMarkers.push([element.lat, element.lon])
+                        popupTextMarkers.push(popupText)
+                    }
                 }
             })
+
+            for(var i=0; i < latLonMarkers.length; i++) {
+                var marker = new L.Marker(latLonMarkers[i])
+                marker.bindPopup(popupTextMarkers[i])
+                marker.addTo(map)
+            }
 
             var bounds = new L.LatLngBounds(latLonMarkers);
             map.fitBounds(bounds)

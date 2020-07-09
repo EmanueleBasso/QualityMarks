@@ -13,10 +13,7 @@ function getCoordinates(event)
         county: event.nomeProvincia.value,
         country: event.nomeNazione.value
     }
-    if (event.indirizzo.value !== "")
-    {
-        query.street = event.indirizzo.value
-    }
+
     return geocoder.search(query)
         .then((response) => {
             if (response.length > 0)
@@ -25,12 +22,26 @@ function getCoordinates(event)
             }
             else
             {
-                return []
+                delete query['county']
+
+                return geocoder.search(query).then((response2) => {
+                    if (response2.length > 0)
+                    {
+                        return [response2[0].lat, response2[0].lon]
+                    }
+                    else
+                    {
+                        return []
+                    }
+                }).catch((error) => {
+                    logger.error(error)
+                    return []
+                })
             }
         }).catch((error) => {
             logger.error(error)
             return []
-        })       
+        })
 }
 
 module.exports = async function (request, response){
@@ -40,15 +51,13 @@ module.exports = async function (request, response){
     var provincia = request.body.provincia
     var mese = request.body.mese
     var categoria = request.body.categoria
-    var ordinamento = request.body.ordinamento
-    var ordinamentoModo = request.body.ordinamentoModo
 
     /*  QUERY:
 
             PREFIX prodotti-qualita: <http://www.semanticweb.org/progettoWS/prodotti-qualita#>
             PREFIX l0: <https://w3id.org/italia/onto/l0/>
 
-            SELECT DISTINCT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione, ?tipologia
+            SELECT DISTINCT ?titolo, ?indirizzo, ?organizzatore, ?mese, str(?sitoWeb) AS ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione, ?tipologia
 
             FROM NAMED <http://localhost:8890/cities>
             FROM NAMED <http://localhost:8890/provinces>
@@ -96,10 +105,9 @@ module.exports = async function (request, response){
                 ?class rdfs:label ?tipologia.
                 opt FILTER(str(?tipologia) = "tipologia")
             }
-            ORDER BY ASC/DESC("variabile")
     */
 
-    var query = `SELECT DISTINCT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione, ?tipologia
+    var query = `SELECT DISTINCT ?titolo, ?indirizzo, ?organizzatore, ?mese, str(?sitoWeb) AS ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione, ?tipologia
 
                  FROM NAMED <http://localhost:8890/cities>
                  FROM NAMED <http://localhost:8890/provinces>
@@ -165,12 +173,11 @@ module.exports = async function (request, response){
         query += 'FILTER(str(?tipologia) = "' + categoria + '")'
     }
 
-    query += `}
-             ORDER BY ` + ordinamentoModo + `(?` + ordinamento + `)`
+    query += '}'
 
     connection.query(query, true)
         .then(async (res) => {
-            res.results.bindings.forEach((element) => {
+            await Promise.all(res.results.bindings.map(async (element) => {
                 if(element['indirizzo'] === undefined){
                     element['indirizzo'] = {value: ""}
                 }
@@ -180,22 +187,16 @@ module.exports = async function (request, response){
                 if(element['organizzatore'] === undefined){
                     element['organizzatore'] = {value: "-"}
                 }
-            })
 
-            //logger.info(res.results.bindings)
-            await Promise.all(res.results.bindings.map(async (element) => {
                 await getCoordinates(element).then((result) => {
-                    if(result.length != 0)
-                    {
+                    if(result.length != 0) {
                        element.lat = result[0]
                        element.lon = result[1]
                     }
-                    else
-                    {
-                        console.log(element.titolo.value)
-                    }
                 })
             }))
+            
+            //logger.info(res.results.bindings)
             response.send(res.results.bindings)
         })
         .catch((err) => {
