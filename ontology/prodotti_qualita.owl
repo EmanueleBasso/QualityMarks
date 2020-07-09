@@ -5276,7 +5276,7 @@ carne fresca</consistenza>
         <promuove rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#TorroneDiBagnaraTorrefattoGlassato"/>
         <provincia rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/080"/>
         <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/18"/>
-        <haTitolo>Corso Vittorio Emanuele</haTitolo>
+        <haIndirizzo>Corso Vittorio Emanuele II</haIndirizzo>
         <haTitolo>Festa del Torrone a Bagnara</haTitolo>
         <nelMese>Dicembre</nelMese>
     </owl:NamedIndividual>
