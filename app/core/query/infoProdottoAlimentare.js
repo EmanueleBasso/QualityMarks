@@ -392,7 +392,6 @@ function getInfoAzienda(azienda){
                     FILTER(LANG(?nomeNazione) = "it")
                 }
             }
-            ORDER BY ASC(?nome)
     */
 
     var query = `SELECT ?nome, ?indirizzo, ?cap, ?email, ?numeroTelefono, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeNazione
@@ -424,8 +423,7 @@ function getInfoAzienda(azienda){
             GRAPH ?g3{
                 ?nazione l0:name ?nomeNazione.
                 FILTER(LANG(?nomeNazione) = "it")
-            }}
-            ORDER BY ASC(?nome)`
+            }}`
 
     return connection.query(query, true)
         .then((res) => {
@@ -478,7 +476,6 @@ function getInfoEvento(evento){
                     FILTER(LANG(?nomeNazione) = "it")
                 }
             }
-            ORDER BY ASC(?titolo)
     */
 
     var query = `SELECT ?titolo, ?indirizzo, ?organizzatore, ?mese, ?sitoWeb, ?nomeCitta, ?nomeProvincia, ?nomeRegione, ?nomeNazione
@@ -515,8 +512,7 @@ function getInfoEvento(evento){
             GRAPH ?g4{
                 ?nazione l0:name ?nomeNazione.
                 FILTER(LANG(?nomeNazione) = "it")
-            }}
-            ORDER BY ASC(?titolo)`
+            }}`
 
     return connection.query(query, true)
         .then((res) => {

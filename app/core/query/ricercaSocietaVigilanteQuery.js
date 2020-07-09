@@ -110,7 +110,6 @@ module.exports = async function (request, response){
     query += `?provincia CLV:situatedWithin ?regione.
             }
 
-            ?individual prodotti-qualita:provincia ?provincia.
             GRAPH ?g4{
                 ?regione l0:name ?nomeRegione.`
   
