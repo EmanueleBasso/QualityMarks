@@ -7122,7 +7122,7 @@ vegetali di erba appena sfalciata e/o foglia, mandorla fresca e/o carciofo</odor
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnano">
         <rdf:type rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#Pasta"/>
         <haDisciplinare rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnanoDisciplinare"/>
-        <haZonaDiProduzione rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnano"/>
+        <haZonaDiProduzione rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#PastaDiGragnanoZDP"/>
         <nazione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/ITA"/>
         <possiede rdf:resource="http://www.semanticweb.org/progettoWS/prodotti-qualita#IGP"/>
         <regione rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/15"/>
